@@ -56,3 +56,41 @@
 
 - UserController.php
 ```
+
+# Database
+
+## Column Naming
+
+- Primary key should be always `id`
+- Foreign keys should have suffix id (`user_id`, `product_id`, `category_id`...)
+- When choosing a name you should be careful with [reserved words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
+
+### Names for frequently used columns:
+
+- **order_column** - field for sorting entities (e.g. drag & drop)
+- **company_number** - field for CIN / Company Identification Number
+- **vat_number** - field for VATIN / VAT ID / VAT Identification Number
+
+### Names by column type:
+
+- **boolean** - `is_enabled`, `has_reviews`
+- **timestamp** - `published_at`, 'valid_from', `scheduled_for`
+
+> **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from is_finished to finished_at)
+
+## Column Sorting
+
+- **id** - should be always first
+- **foreign keys**
+- **rest of columns** - should be sorted by priorty and groupped by context
+- **native timestamps** - `created_at`, `updated_at`
+
+## UUIDs
+
+Secure alternative to ids. They should be used for publicly accessible websites or for some tables with sensitive content (bank accounts, orders, invoices...). [How to use uuids?](https://laravel.com/docs/10.x/eloquent#uuid-and-ulid-keys)
+
+## Indexes
+
+Indexes are database structures that allow for faster retrieval of data. They work by creating a separate data structure that points to the location of the data in the database. When a query is run, the database can use the index to quickly find the relevant data instead of having to search the entire database.
+
+> **Pro tip:** Just use indexes on any columns that are frequently queried or used in joins and your database's performance will be improved.
