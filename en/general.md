@@ -6,7 +6,7 @@
 
 ## Attributes
 
-- Native attributes from Laravel (e. g. $fillable) should have been without comment.
+- Native attributes from Laravel (e.g. $fillable) should have been without comment.
 - Also without a type hint because you will never access the property
 
 ```php
