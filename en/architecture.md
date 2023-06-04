@@ -74,7 +74,7 @@
 ### Names by column type:
 
 - **boolean** - `is_enabled`, `has_reviews`
-- **timestamp** - `published_at`, 'valid_from', `scheduled_for`
+- **timestamp** - `published_at`, `valid_from`, `scheduled_for`
 
 > **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from is_finished to finished_at)
 
