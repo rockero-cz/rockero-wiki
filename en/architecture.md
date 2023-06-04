@@ -2,7 +2,7 @@
 
 ## Naming
 
-- Singular without “Model” suffix
+- Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
 ## Rules
 
@@ -29,7 +29,7 @@
 
 ## Naming
 
-- Singular with “Controller” suffix
+- Singular with “Controller” suffix (`UserController`, `ProductController`, `CategoryController`...)
 
 ## Types
 
@@ -62,7 +62,7 @@
 ## Column Naming
 
 - Primary key should be always `id`
-- Foreign keys should have suffix id (`user_id`, `product_id`, `category_id`...)
+- Foreign keys should be a singular with the suffix id (`user_id`, `product_id`, `category_id`...)
 - When choosing a name you should be careful with [reserved words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
 
 ### Names for frequently used columns:
@@ -107,3 +107,15 @@ Migrations are a way to version control your database schema. They allow you to 
 - Add short note with `comment()` method if column names are not clear (e.g. professional terms)
 
 > **Pro tip:** As you build your application, you may accumulate more and more migrations over time. This can lead to your `database/migrations` directory becoming bloated with potentially hundreds of migrations. If you would like, you may "squash" your migrations into a single SQL file. [Read more](https://laravel.com/docs/migrations#squashing-migrations)
+
+## Seeders
+
+Seeders are used to populate a database with initial/testing data. They are especially useful in scenarios where you need to populate your database with pre-existing data, such as test data or reference data.
+
+By using a seeder, you can quickly populate your database with the necessary data without having to manually enter it every time.
+
+> **Pro tip:** Sometimes you need to disable model events inside seeders. You can simply make it with a trait `WithoutModelEvents` [Read more](https://laravel.com/docs/seeding#muting-model-events)
+
+### Naming
+
+- Singular with “Seeder” suffix (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
