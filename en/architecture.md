@@ -167,7 +167,7 @@ Route::middleware('auth')->group(function () {
 
 Middleware is a way to filter and modify incoming HTTP requests in your application, allowing you to perform various tasks such as authentication, authorization, and session management.
 
-You should create middleware in cases when you need to do some specific logic for a specific group of routes.
+You should create middleware in cases when you need to do some specific logic for a specific group of routes. [Read more](https://laravel.com/docs/middleware)
 
 **Create command:** `php artisan make:middleware HandleLocale`
 
