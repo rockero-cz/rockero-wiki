@@ -17,10 +17,8 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 ## Structure
 
 - **Attributes** - `$fillable`, `$casts`…
-- **Lifecycle methods**
-  - `boot()`, `booted()`
-- **Relationships**
-  - belongs, has, morphs…
+- **Lifecycle methods** - `boot()`, `booted()`
+- **Relationships** - belongs, has, morphs…
 - **Accessors & mutators**
 - **Everything else**
 
@@ -133,10 +131,12 @@ It is simpler alternative than using services.
 ```php
 class Cart
 {
-  //
+//
 }
 ```
 
 ## Naming
 
 Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Table`...)
+
+#
