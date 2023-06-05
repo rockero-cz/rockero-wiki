@@ -139,6 +139,30 @@ class Cart
 
 Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Table`...)
 
+# Routing
+
+## Route Types
+
+- **web** - Routes that handle web-based HTTP requests and responses…
+- **api** - Routes that handle API requests and responses…
+- **channels** - Routes that handle real-time broadcasting to channels using websockets…
+- **console** - Routes for custom commands that can be executed via Artisan CLI…
+
+## Best practices
+
+- URLs should be in plural.
+- Each route should have name.
+- Routes should be groupped by entities.
+
+```php
+Route::middleware('auth')->group(function () {
+  Route::name('users.')->group(function () {
+    Route::get('/', UserIndex::class)->name('index');
+    Route::get('/{user}', UserShoa::class)->name('show');
+  });
+});
+```
+
 # Middleware
 
 Middleware is a way to filter and modify incoming HTTP requests in your application, allowing you to perform various tasks such as authentication, authorization, and session management.
