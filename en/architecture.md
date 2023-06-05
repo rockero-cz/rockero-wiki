@@ -29,6 +29,8 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
 # Controller
 
+**Create command:** `php artisan make:controller UserController`
+
 ## Naming
 
 Singular with “Controller” suffix (`UserController`, `ProductController`, `CategoryController`...)
@@ -58,3 +60,36 @@ Singular with “Controller” suffix (`UserController`, `ProductController`, `C
 
 - UserController.php
 ```
+
+# Request
+
+Requests are objects that encapsulate the input data from an HTTP request.
+
+They provide a convenient way to validate and process user input before using it in your application.
+
+**Create command:** `php artisan make:request StoreUserRequest`
+
+```php
+class StoreUserRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     */
+    public function rules()
+    {
+        return ['name' => 'required'];
+    }
+}
+```
+
+## Naming
+
+Method name with singular model name and with “Request” suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
