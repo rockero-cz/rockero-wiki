@@ -192,3 +192,52 @@ Route::prefix('/admin')->name('admin.')->middleware(HandleLocale::class)->group(
   Route::resource('orders', OrderController::class)->name('orders');
 });
 ```
+
+# Observer
+
+Observers are used to listen for specific events that occurred by models, such as `created`, `updated`, or `deleted` and more...
+
+By using observers, you can keep your model classes focused on their primary responsibilities and avoid cluttering them with additional logic. [Read more](https://laravel.com/docs/eloquent#observers)
+
+> **Warning:** Eloquent mass update queries do not perform the event and the observer is not triggered. It is caused because models are not actually loaded when doing a mass update but only SQL query is.
+
+**Create command:** `php artisan make:observer UserObserver --model=User`
+
+```php
+class UserObserver
+{
+  /**
+   * Handle the User "created" event.
+   */
+  public function created(User $user): void
+  {
+    //
+  }
+}
+```
+
+## Naming
+
+Singular model name with “Observer” suffix (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
+
+## Usage example
+
+```php
+// Recalculate invoice when the invoice item is saved.
+public function saved(InvoiceItem $invoiceItem): void
+{
+  $invoiceItem->invoice()->recalculate();
+}
+
+// Set default state when the order is created.
+public function creating(Order $order): void
+{
+    $order->state = OrderState::NEW;
+}
+
+// Delete relations before the model is deleted.
+public function deleting(Order $order): void
+{
+    $order->products()->delete();
+}
+```
