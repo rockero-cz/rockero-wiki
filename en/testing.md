@@ -121,7 +121,7 @@ mock(Client::class)
 
 Fixtures are static files used for testing, and they should be placed inside the "fixtures" directory. They can be used in tests to simulate real data sources or to provide specific test conditions.
 
-**Example of usage**
+**Usage examples**
 
 ```php
 $payment = base_path('tests/fixtures/payment.xml');
