@@ -131,7 +131,7 @@ It is simpler alternative than using services.
 ```php
 class Cart
 {
-//
+  //
 }
 ```
 
@@ -139,4 +139,32 @@ class Cart
 
 Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Table`...)
 
-#
+# Middleware
+
+Middleware is a way to filter and modify incoming HTTP requests in your application, allowing you to perform various tasks such as authentication, authorization, and session management.
+
+You should create middleware in cases when you need to do some specific logic for a specific group of routes.
+
+**Create command:** `php artisan make:middleware HandleLocale`
+
+```php
+class HandleLocale
+{
+  /**
+   * Handle an incoming request.
+   */
+  public function handle(Request $request, Closure $next): Response
+  {
+    return $next($request);
+  }
+}
+```
+
+## Usage example
+
+```php
+Route::prefix('/admin')->name('admin.')->middleware(HandleLocale::class)->group(function () {
+  Route::resource('users', UserController::class)->name('users');
+  Route::resource('orders', OrderController::class)->name('orders');
+});
+```
