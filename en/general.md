@@ -1,6 +1,6 @@
 # General
 
-- When writing code, it is important to keep in mind some general principles and standards that can help improve its quality and readability.
+When writing code, it is important to keep in mind some general principles and standards that can help improve its quality and readability.
 
 # Commenting
 

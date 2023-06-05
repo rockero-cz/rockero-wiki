@@ -40,7 +40,7 @@ Indexes are database structures that allow for faster retrieval of data. They wo
 
 Migrations are a way to version control your database schema. They allow you to make changes to the database schema in a structured way, and enable you to easily roll back changes if necessary. [Read more](https://laravel.com/docs/migrations)
 
-## Rules
+## Best practices
 
 - During development, it's fine to modify existing migration files and run `php artisan migrate:fresh` to reset the database
 - Once the project is in production, you have to create new migrations for every change, even small ones

@@ -6,16 +6,13 @@
 
 Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
-## Rules
+## Best practices
 
 - Follow the defined structure.
-- Models should keep only
-  - native things from Laravel - relationships, scopes, etc.
-  - things associated with the database.
 - Methods should be tiny and clean.
-  - Huge business logic should be written into Support/Action classes.
-- Use `$fillable` instead of `$guarded`
-  - it is more secured
+- Models should contains only Laravel native things (relations, scopes...) and database-associated code.
+  - Huge business logic should be written into `Support` or `Action` classes.
+- Use `$fillable` instead of `$guarded` because of greater security.
 
 ## Structure
 
@@ -35,16 +32,16 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
 Singular with “Controller” suffix (`UserController`, `ProductController`, `CategoryController`...)
 
+## Best practices
+
+- Don’t put advanced code logic inside, only use them for data returning or resolving actions.
+- When you need an extra method in the resource, you should put it inside the resource controller and register a separate route.
+
 ## Types
 
 - **resource** - contains methods for each CRUD operation also with methods that present HTML templates such as `create` and `edit`
 - **api** - contains also a method for each CRUD operation, but does not provide HTML templates methods
 - **invokable** - controllers for single actions that do not match resources
-
-## Best practices
-
-- Don’t put advanced code logic inside, only use them for data returning or resolving actions
-- When you need an extra method in the resource, you should put it inside the resource controller and register a separate route.
 
 ## Namespacing
 
@@ -93,3 +90,53 @@ class StoreUserRequest extends FormRequest
 ## Naming
 
 Method name with singular model name and with “Request” suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
+
+# Action
+
+Actions are classes responsible for only one single task. Code is cleaner and simpler.
+
+**Create command:** `php artisan make:action VerifyUserRequest`
+
+```php
+class VerifyUserAction
+{
+    /**
+     * Run the action.
+     */
+    public function run(): void
+    {
+        //
+    }
+}
+```
+
+## Naming
+
+Action purpose name with “Action” suffix (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
+
+## Best practices
+
+- Actions should contain only one public method with the name `run()`.
+- Helper methods of the single action should be private or protected.
+  - Multiple helper methods may be converted to Support classes.
+
+# Support
+
+Support classes are a way to group related functions and logic together in a single class. They allow for easy reuse of code and help to keep application code organized.
+
+They are typically used to provide functionality that is not specific to a single model or controller, but rather is used across multiple parts of an application.
+
+It is simpler alternative than using services.
+
+**Create command:** `php artisan make:class Support/Cart`
+
+```php
+class Cart
+{
+  //
+}
+```
+
+## Naming
+
+Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Table`...)
