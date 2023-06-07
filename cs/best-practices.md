@@ -25,7 +25,7 @@ Pokud nevíte, jak napsat specifickou část kódu, tak zkuste trochu hledat - p
 
 ---
 
-## Raději mít duplicitní kód než mít **špatnou** abstrakci.
+## Raději mít duplicitní kód, než **špatnou** abstrakci.
 
 Pokud narazíte, oprava špatné abstrakce vás může stát hodně času.
 
