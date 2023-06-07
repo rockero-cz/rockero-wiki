@@ -20,7 +20,7 @@ Code is then easier to maintain and it also improves readiablity and consitency.
 If you don't how to write specific code, try to make some research - dig deeper inside the Laravel codebase, list GitHub repositories with many stars, or browse the source code of well-known packages...
 
 ```
-“Consistency is key“ - Spatie
+"Consistency is key" - Spatie
 ```
 
 ---

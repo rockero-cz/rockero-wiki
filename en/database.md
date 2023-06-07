@@ -82,7 +82,7 @@ By using a seeder, you can quickly populate your database with the necessary dat
 
 ## Naming
 
-Singular with “Seeder” suffix (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
+Singular with "Seeder" suffix (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
 
 # Factories
 
@@ -110,7 +110,7 @@ class ProductFactory extends Factory
 
 ## Naming
 
-Singular model name with “Factory” suffix (`UserFactory`, `ProductFactory`, `CategoryFactory`...)
+Singular model name with "Factory" suffix (`UserFactory`, `ProductFactory`, `CategoryFactory`...)
 
 ## Usage Examples
 

@@ -36,11 +36,22 @@
 
 # Model
 
-**Create command:** `php artisan make:model User`
+Models are classes that represent database tables. They allow you to interact with the corresponding data using object-oriented syntax.
+
+In other words, models provide an easy way to query, insert, update, and delete data in a database table.
+
+**Create command:** `php artisan make:model Product`
+
+```php
+class Product extends Model
+{
+    use HasFactory;
+}
+```
 
 ## Naming
 
-Singular without “Model” suffix (`User`, `Product`, `Category`...)
+Singular without "Model" suffix (`User`, `Product`, `Category`...)
 
 ## Best practices
 
@@ -65,7 +76,7 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
 ## Naming
 
-Singular with “Controller” suffix (`UserController`, `ProductController`, `CategoryController`...)
+Singular with "Controller" suffix (`UserController`, `ProductController`, `CategoryController`...)
 
 ## Best practices
 
@@ -124,7 +135,7 @@ class StoreUserRequest extends FormRequest
 
 ## Naming
 
-Method name with singular model name and with “Request” suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
+Method name with singular model name and with "Request" suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
 
 # Configuration
 
@@ -156,9 +167,11 @@ class VerifyUserAction
 }
 ```
 
+> **Tip:** This command is not part of Laravel framework, install our package `rockero-cz/laravel-starter-kit` to get a bit of magics.
+
 ## Naming
 
-Action purpose name with “Action” suffix (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
+Action purpose name with "Action" suffix (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
 
 ## Best practices
 
@@ -183,9 +196,11 @@ class Cart
 }
 ```
 
+> **Tip:** This command is not part of Laravel framework, install our package `rockero-cz/laravel-starter-kit` to get a bit of magics.
+
 ## Naming
 
-Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Table`...)
+Support purpose name without "Support" suffix (`Cart`, `OpeningHours`, `Table`...)
 
 # Routing
 
@@ -266,7 +281,7 @@ class UserObserver
 
 ## Naming
 
-Singular model name with “Observer” suffix (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
+Singular model name with "Observer" suffix (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
 
 ## Usage example
 

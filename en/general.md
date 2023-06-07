@@ -24,26 +24,26 @@ When writing code, it is important to keep in mind some general principles and s
 
 | Class        | Naming                                                     | Example                                                                              |
 | ------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Action       | action name with “Action” suffix                           | `CreateUserAction`, `DeleteProductAction`, `UpdateCategoryAction`                    |
+| Action       | action name with "Action" suffix                           | `CreateUserAction`, `DeleteProductAction`, `UpdateCategoryAction`                    |
 | Command      | command name without suffix                                | `GenerateReport`, `ImportData`, `ExportData`                                         |
-| Controller   | singular with “Controller” suffix                          | `UserController`, `ProductController`, `CategoryController`                          |
-| Data         | singular with “Data” suffix                                | `UserData`, `ProductData`, `CategoryData`                                            |
+| Controller   | singular with "Controller" suffix                          | `UserController`, `ProductController`, `CategoryController`                          |
+| Data         | singular with "Data" suffix                                | `UserData`, `ProductData`, `CategoryData`                                            |
 | Event        | event name without suffix                                  | `UserCreated`, `OrderCreated`, `OrderShipped`                                        |
-| Exception    | singular with “Exception” suffix                           | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
+| Exception    | singular with "Exception" suffix                           | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
 | Interface    | adjective/noun without suffix                              | `Loggable`, `Configurable`, `Exportable`                                             |
 | Job          | job name without suffix                                    | `SendEmail`, `ProcessPayment`, `GenerateReport`                                      |
 | Mail         | mail name without suffix                                   | `WelcomeEmail`, `OrderConfirmationMail`, `NewsletterMail`                            |
 | Middleware   | middleware name without suffix                             | `Authentication`, `RateLimit`, `Cors`                                                |
 | Model        | singular without suffix                                    | `User`, `Product`, `Category`                                                        |
 | Notification | notification name without suffix                           | `InvoicePaid`, `OrderShipped`, `PasswordReset`                                       |
-| Observer     | singular model name with “Observer” suffix                 | `UserObserver`, `ProductObserver`, `CategoryObserver`                                |
-| Policy       | singular model name with “Policy” suffix                   | `UserPolicy`, `ProductPolicy`, `CategoryPolicy`                                      |
-| Provider     | provider name with “Provider” suffix                       | `PaymentProvider`, `StorageProvider`, `EmailProvider`                                |
-| Request      | method name with singular model name with “Request” suffix | `StoreUserRequest`, `UpdateProductRequest`, `DestroyCategoryRequest`                 |
+| Observer     | singular model name with "Observer" suffix                 | `UserObserver`, `ProductObserver`, `CategoryObserver`                                |
+| Policy       | singular model name with "Policy" suffix                   | `UserPolicy`, `ProductPolicy`, `CategoryPolicy`                                      |
+| Provider     | provider name with "Provider" suffix                       | `PaymentProvider`, `StorageProvider`, `EmailProvider`                                |
+| Request      | method name with singular model name with "Request" suffix | `StoreUserRequest`, `UpdateProductRequest`, `DestroyCategoryRequest`                 |
 | Rule         | rule name without suffix                                   | `ValidPhoneNumber`, `ValidBankAccount`, `Uppercase`                                  |
-| Scope        | scope name with “Scope” suffix                             | `ActiveScope`, `NewScope`, `TrendingScope`                                           |
+| Scope        | scope name with "Scope" suffix                             | `ActiveScope`, `NewScope`, `TrendingScope`                                           |
 | Support      | support name without suffix                                | `OpeningHours`, `Cart`, `Table`                                                      |
-| Trait        | adjective/prefix “with“ without suffix                     | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
+| Trait        | adjective/prefix "with" without suffix                     | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
 
 ## Code naming
 
@@ -62,7 +62,7 @@ When writing code, it is important to keep in mind some general principles and s
 | Pivot table  | snake_case - singular model names alphabetically    | `category_product`, `order_user`       |
 | Table column | snake_case - without table prefix                   | `title`, `price`, `description`        |
 | Primary key  | id                                                  | `id`                                   |
-| Foreign key  | snake_case - singular model name with “\_id” suffix | `user_id`, `product_id`, `category_id` |
+| Foreign key  | snake_case - singular model name with "\_id" suffix | `user_id`, `product_id`, `category_id` |
 
 # Structure
 
