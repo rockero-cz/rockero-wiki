@@ -17,7 +17,7 @@
 - **boolean** - `is_enabled`, `has_reviews`
 - **timestamp** - `published_at`, `valid_from`, `scheduled_for`
 
-> **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from is_finished to finished_at)
+> **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from is_finished to finished_at). There is a benefit that you have in fact two pieces of information in one column.
 
 ## Column Sorting
 
