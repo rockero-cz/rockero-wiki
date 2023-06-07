@@ -27,8 +27,8 @@
   - [Naming](#naming-5)
   - [Ukázky použití](#ukázky-použití-1)
 - [Event](#event)
-  - [Dispatching events](#dispatching-events)
-- [Listeners](#listeners)
+  - [Vyvolání eventů](#vyvolání-eventů)
+  - [Listeners](#listeners)
 - [Command](#command)
   - [Plánování příkazů](#plánování-příkazů)
 
