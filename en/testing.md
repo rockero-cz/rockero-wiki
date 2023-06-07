@@ -16,13 +16,19 @@
 
 # Testing
 
-For testing, we use a library called [Pest](https://pestphp.com/) because of its
+For automated testing, we use a framework [Pest](https://pestphp.com/) because of its many benefits. `Pest` focuses on simplicity and writing tests is really enjoyable with it.
 
-- simplicity
-- readability
-- better assertations
+Additionally, it also has better assertions, cool syntax, and great documentation.
 
 **Create command:** `php artisan make:test Actions/VerifyUserActionTest`
+
+```php
+it('has a welcome page', function() {
+  $response = $this->get('/');
+
+  expect($response->status())->toBe(200);
+});
+```
 
 ## Why write tests?
 
@@ -35,25 +41,23 @@ For testing, we use a library called [Pest](https://pestphp.com/) because of its
 
 Each created class containing some logic should also have a test.
 
-## How do we write tests?
-
-We write only _Feature tests_ on most projects. For more complex projects, it is essential to include _Unit tests_ in your development process to ensure the highest quality results.
-
-The content of a single test should contain multiple scenarios so you can cover most of the edge cases.
-
-The test should contain only assertations that are associated with the tested class so we avoid duplicated assertations.
-
-> Ideal coverage of your tests should be greater than 80%.
-
 ## What should be tested?
 
 - Code logic (actions, support classes, jobs…)
-- Livewire components
+- Livewire components / Controllers
 - Routes
+
+## How to write tests?
+
+On most projects, we only write `Feature` tests. However, on some complex ones, it is crucial to include also `Unit` tests.
+
+When writing tests, it is important to include multiple scenarios to cover most of edge cases. Additionally, tests should only contain assertions that are directly related to the tested class or function to avoid redundancy and improve readability.
+
+> **Pro tip:** Keep your coverage as high as possible, it should be at least 70%.
 
 ## Helpers
 
-Helpers can reduce code duplication and improve test readability. You can use Pest hooks to prepare/clean data before/after each/all test runs. Additionally, you can create custom methods that can be used in multiple tests.
+Helpers can reduce code duplication and improve test readability. You can use `Pest` hooks to prepare/clean data before/after each/all test runs. Additionally, you can create custom methods that can be used in multiple tests.
 
 ## Pest hooks
 
@@ -115,22 +119,19 @@ expect($response)->toBe('foo@gmail.com');
 **Example of class mocking:**
 
 ```php
-// The class with method you want to mock.
-app(Client::class)->acceptOrder($order);
-
 use function Pest\Laravel\mock;
 
 mock(Client::class)
     // You may need to check the passed arguments
-    ->withArgs(fn ($givenOrder, $givenState) => $givenOrder->is($order))
-    // Or check the returned data
+    ->withArgs(fn ($givenOrder) => $givenOrder->is($order))
+    // Or check the response
     ->andReturn(true)
     ->shouldReceive('acceptOrder')
     // You also can check how many times the class should be called
+    ->never()
     ->once()
     ->twice()
-    ->times($int)
-    ->never()
+    ->times(3)
 ```
 
 > **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don't hit official endpoints with your tests - in Laravel you can prevent these stray requests with `Http::preventStrayRequests()`. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
@@ -151,20 +152,18 @@ app(ProcessPaymentAction::class)->run($payment, ...);
 
 To ensure the proper naming of your test cases, it is recommended that you follow the example provided.
 
-**Example of naming**
-
 ```php
-// Good example - lowercase, descriptive
-test('payment can be processed', function () {
+// Good examples - lowercase, descriptive
+test('payment can be processed', function() {
   ...
 });
 
-it('performs sums', function () {
+it('has a welcome page', function() {
   ...
 });
 
 // Bad example - uppercase, low descriptive
-it('Performs sums', function () {
+it('sums', function() {
   ...
 });
 ```
