@@ -49,7 +49,6 @@
 ### Recommended Twitter Accounts
 
 - [https://twitter.com/taylorotwell](https://twitter.com/taylorotwell)
-- [https://twitter.com/rockero_cz](https://twitter.com/rockero_cz)
 - [https://twitter.com/gonedark](https://twitter.com/gonedark)
 - [https://twitter.com/calebporzio](https://twitter.com/calebporzio)
 - [https://twitter.com/barryvdh](https://twitter.com/barryvdh)
