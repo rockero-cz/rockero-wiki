@@ -1,3 +1,39 @@
+# Table of Contents
+
+- [Model](#model)
+  - [Naming](#naming)
+  - [Best practices](#best-practices)
+  - [Structure](#structure)
+- [Controller](#controller)
+  - [Naming](#naming-1)
+  - [Best practices](#best-practices-1)
+  - [Types](#types)
+  - [Namespacing](#namespacing)
+- [Request](#request)
+  - [Naming](#naming-2)
+- [Configuration](#configuration)
+  - [Best practices](#best-practices-2)
+- [Action](#action)
+  - [Naming](#naming-3)
+  - [Best practices](#best-practices-3)
+- [Support](#support)
+  - [Naming](#naming-4)
+- [Routing](#routing)
+  - [Route Types](#route-types)
+  - [Best practices](#best-practices-4)
+- [Middleware](#middleware)
+  - [Usage example](#usage-example)
+- [Observer](#observer)
+  - [Naming](#naming-5)
+  - [Usage example](#usage-example-1)
+- [Event](#event)
+  - [Dispatching events](#dispatching-events)
+  - [Listeners](#listeners)
+- [Command](#command)
+  - [Scheduling commands](#scheduling-commands)
+
+---
+
 # Model
 
 **Create command:** `php artisan make:model User`
@@ -12,8 +48,8 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 - Methods should be tiny and clean.
 - Models should contains only Laravel native things (relations, scopes...) and database-related code.
   - Huge business logic should be written into `Support` or `Action` classes.
-- Use `$fillable` instead of `$guarded` because of greater security.
-- Use [Mass Assignemnt](https://laravel.com/docs/eloquent#mass-assignment) where possible.
+- Use `$fillable` instead of `$guarded` because of higher security.
+- Use [Mass Assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
 
 ## Structure
 
@@ -170,7 +206,7 @@ Support purpose name without “Support” suffix (`Cart`, `OpeningHours`, `Tabl
 Route::middleware('auth')->group(function () {
   Route::name('users.')->group(function () {
     Route::get('/', UserIndex::class)->name('index');
-    Route::get('/{user}', UserShoa::class)->name('show');
+    Route::get('/{user}', UserShow::class)->name('show');
   });
 });
 ```

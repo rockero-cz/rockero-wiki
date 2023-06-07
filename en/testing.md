@@ -6,12 +6,14 @@ For testing, we use a library called [Pest](https://pestphp.com/) because of its
 - readability
 - better assertations
 
+**Create command:** `php artisan make:test Actions/VerifyUserActionTest`
+
 ## Why write tests?
 
 - **Code quality** - writing tests forces you to think about the code
 - **Bugs catching** - tests can reveal some bugs before the application is live
 - **Time saving** - in the long term, tests should reduce the need for manual testing
-- **Increased confidence** - it is easier to make changes and add new features because the risk of breaking functionality is less
+- **Increased confidence** - it is easier to make changes and add new features because there is less risk of breaking functionality.
 
 ## When to write tests?
 
@@ -21,7 +23,7 @@ Each created class containing some logic should also have a test.
 
 We write only _Feature tests_ on most projects. For more complex projects, it is essential to include _Unit tests_ in your development process to ensure the highest quality results.
 
-The content of a single test should contain multiple scenarios so you can cover most of the edges.
+The content of a single test should contain multiple scenarios so you can cover most of the edge cases.
 
 The test should contain only assertations that are associated with the tested class so we avoid duplicated assertations.
 
@@ -68,7 +70,7 @@ it('can manage users', function () {
 ```php
 function mockPayments(): object
 {
-	$client = Mockery::mock(PaymentClient::class);
+  $client = Mockery::mock(PaymentClient::class);
 
   return $client;
 }
@@ -80,7 +82,7 @@ it('may buy a book', function () {
 
 ## Mocking
 
-Mocking certain parts of your application can be necessary for some cases, such as events, file uploads, or 3rd party integrations. [More here](https://laravel.com/docs/9.x/mocking).
+Mocking certain parts of your application can be necessary for some cases, such as events, file uploads, or 3rd party integrations. [More here](https://laravel.com/docs/mocking).
 
 **Example of request mocking:**
 
@@ -115,7 +117,7 @@ mock(Client::class)
     ->never()
 ```
 
-> **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don’t hit official endpoints with your tests - in Laravel you can prevent these stray requests with* `Http::preventStrayRequests()`*. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
+> **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don’t hit official endpoints with your tests - in Laravel you can prevent these stray requests with `Http::preventStrayRequests()`. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
 
 ## Fixtures
 
@@ -138,15 +140,15 @@ To ensure the proper naming of your test cases, it is recommended that you follo
 ```php
 // Good example - lowercase, descriptive
 test('payment can be processed', function () {
-	...
+  ...
 });
 
 it('performs sums', function () {
-	...
+  ...
 });
 
 // Bad example - uppercase, low descriptive
 it('Performs sums', function () {
-	...
+  ...
 });
 ```
