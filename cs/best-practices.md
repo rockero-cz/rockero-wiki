@@ -27,7 +27,7 @@ Pokud nevíte, jak napsat specifickou část kódu, tak zkuste trochu hledat - p
 
 ## Raději mít duplicitní kód, než **špatnou** abstrakci.
 
-Pokud narazíte, oprava špatné abstrakce vás může stát hodně času.
+Pokud narazíte, oprava špatné abstrakce Vás může stát hodně času.
 
 Je lepší počkat až budete mít jistotu ohledně abstrakce a pak se pustit do refaktorování.
 
@@ -55,7 +55,7 @@ My používáme [PHPStan](https://phpstan.org), který za nás odhaluje chyběj�
 
 ## Používejte Artisan CLI k vytváření tříd.
 
-Artisan generuje třídy ze šablon a tím vás nutí dodržovat danou strukturu.
+Artisan generuje třídy ze šablon a tím Vás nutí dodržovat danou strukturu.
 
 ```php
 php artisan make:migration CreateProductsTable
