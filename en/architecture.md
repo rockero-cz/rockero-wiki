@@ -86,6 +86,12 @@ class UserController extends Controller
 
 Singular with "Controller" suffix (`UserController`, `ProductController`, `CategoryController`...)
 
+## Types
+
+- **resource** - contains methods for each `CRUD` operation also with methods that present HTML templates such as `create` and `edit`
+- **api** - contains also a method for each `CRUD` operation, but does not provide HTML templates methods
+- **invokable** - controllers for single actions that do not match resources
+
 ## Best practices
 
 - Keep controller methods thin.
@@ -93,25 +99,15 @@ Singular with "Controller" suffix (`UserController`, `ProductController`, `Categ
   - They are mainly responsible for one thing - returning a response.
 - For `CRUD` operations you should use [resource controllers](https://laravel.com/docs/controllers#resource-controllers)
 
-## Types
-
-- **resource** - contains methods for each CRUD operation also with methods that present HTML templates such as `create` and `edit`
-- **api** - contains also a method for each CRUD operation, but does not provide HTML templates methods
-- **invokable** - controllers for single actions that do not match resources
-
 ## Namespacing
 
-- When you have multiple types of controllers (one for API, one for Admins), you should group them by the following structure:
+When you have multiple types of controllers (for `API`, for Admin...), you should group them by the following structure:
 
 ```php
-/Admin
-  - Admin controllers
-/API
-	/Admin
-		- Administration controllers for API
-  - Controllers for API
-
-- UserController.php
+Admin/UserController.php
+Api/Admin/UserController.php
+Api/UserController.php
+UserController.php
 ```
 
 # Request
