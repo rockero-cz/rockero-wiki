@@ -6,8 +6,8 @@
   - [Structure](#structure)
 - [Controller](#controller)
   - [Naming](#naming-1)
-  - [Best practices](#best-practices-1)
   - [Types](#types)
+  - [Best practices](#best-practices-1)
   - [Namespacing](#namespacing)
 - [Request](#request)
   - [Naming](#naming-2)
@@ -38,7 +38,7 @@
 
 Models are classes that represent database tables. They allow you to interact with the corresponding data using object-oriented syntax.
 
-In other words, models provide an easy way to query, insert, update, and delete data in a database table.
+In other words, models provide an easy way to query, insert, update, and delete data in a database table. [Read more](https://laravel.com/docs/eloquent)
 
 **Create command:** `php artisan make:model Product`
 
@@ -71,7 +71,7 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 
 # Controller
 
-Controllers handle requests and responses. In fact, they are intermediaries between the database, views, and business logic.
+Controllers handle requests and responses. In fact, they are intermediaries between the database, views, and business logic. [Read more](https://laravel.com/docs/controllers)
 
 **Create command:** `php artisan make:controller UserController`
 
@@ -114,7 +114,7 @@ UserController.php
 
 Requests are objects that encapsulate the input data from an HTTP request.
 
-They provide a convenient way to validate and process user input before using it in your application.
+They provide a convenient way to validate and process user input before using it in your application. [Read more](https://laravel.com/docs/validation#form-request-validation)
 
 **Create command:** `php artisan make:request StoreUserRequest`
 
