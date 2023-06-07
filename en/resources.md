@@ -1,10 +1,6 @@
 # Learning Resources
 
-### Spatie
-
-- [Guideline](https://spatie.be/guideliness)
-
----
+- [Spatie Guidelines](https://spatie.be/guideliness)
 
 ### Blogs
 
@@ -23,7 +19,7 @@
 
 ---
 
-### Courses
+### Recommended Courses
 
 - [https://writing-readable-php.com/](https://writing-readable-php.com/)
 - [https://testing-laravel.com/](https://testing-laravel.com/)
@@ -33,7 +29,7 @@
 
 ---
 
-### Recommended books
+### Recommended Books
 
 - [https://learn-laravel-queues.com/](https://learn-laravel-queues.com/)
 - [https://spatie.be/products/front-line-php](https://spatie.be/products/front-line-php)
@@ -44,7 +40,7 @@
 
 ---
 
-### Recommended Twitter accounts
+### Recommended Twitter Accounts
 
 - [https://twitter.com/taylorotwell](https://twitter.com/taylorotwell)
 - [https://twitter.com/rockero_cz](https://twitter.com/rockero_cz)
