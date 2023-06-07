@@ -185,7 +185,7 @@ Action purpose name with "Action" suffix (`VerifyUserAction`, `CreateProductActi
 
 - Actions should contain only one public method with the name `run()`.
 - Helper methods of the single action should be private or protected.
-  - Multiple helper methods may be converted to Support classes.
+  - Multiple helper methods may be converted to `Support` classes.
 
 # Support
 
