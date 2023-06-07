@@ -25,7 +25,7 @@
 | Support      | support name without suffix                                | `OpeningHours`, `Cart`, `Table`                                                      |
 | Trait        | adjective/prefix “with“ without suffix                     | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
 
-# Code naming
+## Code naming
 
 | Entity     | Naming                          | Example                                             |
 | ---------- | ------------------------------- | --------------------------------------------------- |
@@ -34,7 +34,7 @@
 | Route      | lowercase - plural              | `users`, `products`, `categories`                   |
 | Route name | snake_case - with 'dot' divison | `users.show`, `products.index`, `categories.create` |
 
-# Database naming
+## Database naming
 
 | Entity       | Naming                                              | Example                                |
 | ------------ | --------------------------------------------------- | -------------------------------------- |
