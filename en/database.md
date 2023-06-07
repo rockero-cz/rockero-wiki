@@ -34,7 +34,7 @@ Secure alternative to ids. They should be used for publicly accessible websites 
 
 Indexes are database structures that allow for faster retrieval of data. They work by creating a separate data structure that points to the location of the data in the database. When a query is run, the database can use the index to quickly find the relevant data instead of having to search the entire database.
 
-> **Pro tip:** Just use indexes on any columns that are frequently queried or used in joins and your database's performance will be improved.
+> **Pro tip:** Just use indexes on any columns that are frequently queried or used in joins and your database performance will be improved.
 
 # Migrations
 
