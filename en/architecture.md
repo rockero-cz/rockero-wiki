@@ -104,7 +104,7 @@ Configurations are always stored in the `config` directory.
 
 Actions are classes responsible for only one single task. Code is cleaner and simpler.
 
-**Create command:** `php artisan make:action VerifyUserRequest`
+**Create command:** `php artisan make:action VerifyUserAction`
 
 ```php
 class VerifyUserAction
@@ -318,5 +318,41 @@ class SendOrderCreatedNotification
     {
         //
     }
+}
+```
+
+# Command
+
+Commands are a powerful tool for automating some tasks in your application. Laravel also provides a set of built-in commands that you can use out of the box.
+
+With commands, you can easily perform repetitive actions like running tests or executing database migrations, with minimal effort. [Read more](https://laravel.com/docs/artisan#writing-commands)
+
+**Create command:** `php artisan make:command FetchUsers`
+
+```php
+class FetchUsers extends Command
+{
+    protected $signature = 'command:name';
+    protected $description = 'Command description';
+
+    /**
+     * Execute the console command.
+     */
+    public function handle(): int
+    {
+        return Command::SUCCESS;
+    }
+}
+```
+
+## Scheduling commands
+
+You can easily run commands at specified intervals or times using [Scheduler](https://laravel.com/docs/scheduling).
+
+```php
+// app/Console/Kernel.php
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('telescope:prune')->daily();
 }
 ```
