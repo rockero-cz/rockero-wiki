@@ -1,3 +1,19 @@
+# Table of Contents
+
+- [Testing](#testing)
+- [Why write tests?](#why-write-tests)
+- [When to write tests?](#when-to-write-tests)
+- [How do we write tests?](#how-do-we-write-tests)
+- [What should be tested?](#what-should-be-tested)
+- [Helpers](#helpers)
+- [Pest hooks](#pest-hooks)
+- [Custom methods](#custom-methods)
+- [Mocking](#mocking)
+- [Fixtures](#fixtures)
+- [Naming](#naming)
+
+---
+
 # Testing
 
 For testing, we use a library called [Pest](https://pestphp.com/) because of its

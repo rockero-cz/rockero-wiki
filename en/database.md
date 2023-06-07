@@ -1,4 +1,23 @@
-# Database
+# Table of Contents
+
+- [Column Naming](#column-naming)
+  - [Names for frequently used columns](#names-for-frequently-used-columns)
+  - [Names by column type](#names-by-column-type)
+- [Column Sorting](#column-sorting)
+- [UUIDs](#uuids)
+- [Indexes](#indexes)
+- [Migrations](#migrations)
+  - [Best practices](#best-practices)
+- [Seeders](#seeders)
+  - [Naming](#naming)
+- [Factories](#factories)
+  - [Naming](#naming-1)
+  - [Usage Examples](#usage-examples)
+  - [Factory methods](#factory-methods)
+  - [Custom Methods](#custom-methods)
+  - [Factory Callbacks](#factory-callbacks)
+
+---
 
 ## Column Naming
 

@@ -1,4 +1,17 @@
-# Best practices
+# Table of Contents
+
+- [Accept the standards and principles and follow them.](#accept-the-standards-and-principles-and-follow-them)
+- [Duplicated code is preferred over the **wrong** abstraction.](#duplicated-code-is-preferred-over-the-wrong-abstraction)
+- [Keep test coverage as high as possible.](#keep-test-coverage-as-high-as-possible)
+- [Use static analysis to keep code high quality.](#use-static-analysis-to-keep-code-high-quality)
+- [Use Artisan CLI for creating classes.](#use-artisan-cli-for-creating-classes)
+- [Simplify your business logic with action classes.](#simplify-your-business-logic-with-action-classes)
+- [Group classes into subfolders by resources.](#group-classes-into-subfolders-by-resources)
+- [Keep controller methods thin.](#keep-controller-methods-thin)
+- [Models should contain only database-related things.](#models-should-contain-only-database-related-things)
+- [Never update the database directly, always use migrations.](#never-update-the-database-directly-always-use-migrations)
+
+---
 
 ## Accept the standards and principles and follow them.
 

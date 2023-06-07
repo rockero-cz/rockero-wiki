@@ -1,9 +1,15 @@
-# Learning Resources
+# Table of Contents
 
-- [Spatie Guidelines](https://spatie.be/guideliness)
+- [Blogs](#blogs)
+- [Recommended Courses](#recommended-courses)
+- [Recommended Books](#recommended-books)
+- [Recommended Twitter Accounts](#recommended-twitter-accounts)
 
-### Blogs
+---
 
+### Websites & Blogs
+
+- [https://spatie.be/guideliness](https://spatie.be/guideliness)
 - [https://laravel-news.com/blog](https://laravel-news.com/blog)
 - [https://christoph-rumpel.com/](https://christoph-rumpel.com/)
 - [https://freek.dev/](https://freek.dev/)

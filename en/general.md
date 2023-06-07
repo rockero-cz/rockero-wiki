@@ -1,3 +1,19 @@
+# Table of Contents
+
+- [General](#general)
+- [Naming Conventions](#naming-conventions)
+  - [Class naming](#class-naming)
+  - [Code naming](#code-naming)
+  - [Database naming](#database-naming)
+- [Structure](#structure)
+  - [Class structure](#class-structure)
+- [Commenting](#commenting)
+  - [Attributes](#attributes)
+  - [Methods](#methods)
+  - [Code](#code)
+
+---
+
 # General
 
 When writing code, it is important to keep in mind some general principles and standards that can help improve its quality and readability.
