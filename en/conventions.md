@@ -1,5 +1,7 @@
 # Naming Conventions
 
+## Class naming
+
 | Class        | Naming                                                     | Example                                                                              |
 | ------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Action       | action name with “Action” suffix                           | `CreateUserAction`, `DeleteProductAction`, `UpdateCategoryAction`                    |
@@ -22,3 +24,22 @@
 | Scope        | scope name with “Scope” suffix                             | `ActiveScope`, `NewScope`, `TrendingScope`                                           |
 | Support      | support name without suffix                                | `OpeningHours`, `Cart`, `Table`                                                      |
 | Trait        | adjective/prefix “with“ without suffix                     | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
+
+# Code naming
+
+| Entity     | Naming                          | Example                                             |
+| ---------- | ------------------------------- | --------------------------------------------------- |
+| Methods    | camelCase                       | `store`, `massDestroy`, `run`                       |
+| Property   | snake_case                      | `is_active`, `created_at`                           |
+| Route      | lowercase - plural              | `users`, `products`, `categories`                   |
+| Route Name | snake_case - with 'dot' divison | `users.show`, `products.index`, `categories.create` |
+
+# Database naming
+
+| Entity       | Naming                                              | Example                                |
+| ------------ | --------------------------------------------------- | -------------------------------------- |
+| Table        | snake_case - plural                                 | `users`, `products`, `categories`      |
+| Pivot table  | snake_case - singular model names alphabetically    | `category_product`, `order_user`       |
+| Table column | snake_case - without table prefix                   | `title`, `price`, `description`        |
+| Primary key  | id                                                  | `id`                                   |
+| Foreign key  | snake_case - singular model name with “\_id” suffix | `user_id`, `product_id`, `category_id` |
