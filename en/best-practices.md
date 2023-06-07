@@ -15,7 +15,7 @@
 
 ## Accept the standards and principles and follow them.
 
-Code is then easier to maintain and it also improves readiablity and consitency.
+Code is then easier to maintain and it also improves readability and consistency.
 
 If you don't how to write specific code, try to make some research - dig deeper inside the Laravel codebase, list GitHub repositories with many stars, or browse the source code of well-known packages...
 
