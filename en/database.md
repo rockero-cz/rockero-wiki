@@ -59,7 +59,7 @@ By using a seeder, you can quickly populate your database with the necessary dat
 - **Running all seeders:** `php artisan db:seed`
 - **Running specific seeder:** `php artisan db:seed --class=UserSeeder`
 
-> **Pro tip:** Sometimes you need to disable model events inside seeders. You can simply make it with a trait `WithoutModelEvents` [Read more](https://laravel.com/docs/seeding#muting-model-events)
+> **Pro tip:** Sometimes you need to disable model events inside seeders. You can simply make it with a trait `WithoutModelEvents`. [Read more](https://laravel.com/docs/seeding#muting-model-events)
 
 ## Naming
 
@@ -78,14 +78,14 @@ They are mostly used in seeders and tests. [Read more](https://laravel.com/docs/
 ```php
 class ProductFactory extends Factory
 {
-	public function definition(): array
-	{
-	    return [
-	        'name' => fake()->name(),
-	        'category_id' => Category::factory(),
+    public function definition(): array
+    {
+        return [
+            'name' => fake()->name(),
+            'category_id' => Category::factory(),
             ...
-	    ];
-	}
+        ];
+    }
 }
 ```
 
@@ -218,7 +218,7 @@ Instead of creating client with following setup in each test:
 
 ```php
 Client::factory([
-	'platform' => 'github',
+    'platform' => 'github',
     'email' => 'info@rockero.cz'
 ])->create();
 ```
