@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [Blogs](#blogs)
+- [Websites & Blogs](#websites--blogs)
 - [Recommended Courses](#recommended-courses)
 - [Recommended Books](#recommended-books)
 - [Recommended Twitter Accounts](#recommended-twitter-accounts)
