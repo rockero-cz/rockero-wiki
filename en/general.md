@@ -15,7 +15,7 @@ When writing code, it is important to keep in mind some general principles and s
 | Event        | event name without suffix                                  | `UserCreated`, `OrderCreated`, `OrderShipped`                                        |
 | Exception    | singular with “Exception” suffix                           | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
 | Interface    | adjective/noun without suffix                              | `Loggable`, `Configurable`, `Exportable`                                             |
-| Job          | job name without suffix                                    | `SendEmailJob`, `ProcessPaymentJob`, `GenerateReportJob`                             |
+| Job          | job name without suffix                                    | `SendEmail`, `ProcessPayment`, `GenerateReport`                                      |
 | Mail         | mail name without suffix                                   | `WelcomeEmail`, `OrderConfirmationMail`, `NewsletterMail`                            |
 | Middleware   | middleware name without suffix                             | `Authentication`, `RateLimit`, `Cors`                                                |
 | Model        | singular without suffix                                    | `User`, `Product`, `Category`                                                        |
@@ -31,12 +31,12 @@ When writing code, it is important to keep in mind some general principles and s
 
 ## Code naming
 
-| Entity     | Naming                          | Example                                             |
-| ---------- | ------------------------------- | --------------------------------------------------- |
-| Method     | camelCase                       | `store`, `massDestroy`, `run`                       |
-| Property   | snake_case                      | `is_active`, `created_at`                           |
-| Route      | lowercase - plural              | `users`, `products`, `categories`                   |
-| Route name | snake_case - with 'dot' divison | `users.show`, `products.index`, `categories.create` |
+| Entity     | Naming                           | Example                                             |
+| ---------- | -------------------------------- | --------------------------------------------------- |
+| Method     | camelCase                        | `store`, `massDestroy`, `run`                       |
+| Property   | snake_case                       | `is_active`, `created_at`                           |
+| Route      | lowercase - plural               | `users`, `products`, `categories`                   |
+| Route name | snake_case - with 'dot' notation | `users.show`, `products.index`, `categories.create` |
 
 ## Database naming
 
