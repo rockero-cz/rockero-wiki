@@ -89,6 +89,17 @@ class StoreUserRequest extends FormRequest
 
 Method name with singular model name and with “Request” suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
 
+# Configuration
+
+Configurations are always stored in the `config` directory.
+
+> **Pro tip:** You should never access the `env()` method directly in application. You should use it only in configuration files and access it by `config()` method.
+
+## Best practices
+
+- Custom application settings should be stored in `project.php`.
+- API keys of 3rd party services should be stored in `services.php`.
+
 # Action
 
 Actions are classes responsible for only one single task. Code is cleaner and simpler.
