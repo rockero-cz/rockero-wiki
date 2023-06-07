@@ -29,10 +29,10 @@
 
 | Entity     | Naming                          | Example                                             |
 | ---------- | ------------------------------- | --------------------------------------------------- |
-| Methods    | camelCase                       | `store`, `massDestroy`, `run`                       |
+| Method     | camelCase                       | `store`, `massDestroy`, `run`                       |
 | Property   | snake_case                      | `is_active`, `created_at`                           |
 | Route      | lowercase - plural              | `users`, `products`, `categories`                   |
-| Route Name | snake_case - with 'dot' divison | `users.show`, `products.index`, `categories.create` |
+| Route name | snake_case - with 'dot' divison | `users.show`, `products.index`, `categories.create` |
 
 # Database naming
 
