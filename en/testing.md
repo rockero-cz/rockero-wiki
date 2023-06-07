@@ -133,7 +133,7 @@ mock(Client::class)
     ->never()
 ```
 
-> **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don’t hit official endpoints with your tests - in Laravel you can prevent these stray requests with `Http::preventStrayRequests()`. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
+> **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don't hit official endpoints with your tests - in Laravel you can prevent these stray requests with `Http::preventStrayRequests()`. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
 
 ## Fixtures
 

@@ -108,7 +108,7 @@ abstract public function methodE() {}
 
 ## Attributes
 
-- Native attributes from Laravel (e.g. $fillable) should have been without comment.
+- Native attributes from Laravel (e.g. `$fillable`) should have been without comment.
 - Also without a type hint because you will never access the property
 
 ```php
@@ -122,6 +122,8 @@ protected $signature = 'command:name';
  * Count represents the number of clicks.
  */
 public int $count = 0;
+
+// or
 
 public int $clickCount = 0;
 ```

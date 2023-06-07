@@ -56,11 +56,10 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 ## Best practices
 
 - Follow the defined structure.
-- Methods should be tiny and clean.
 - Models should contains only Laravel native things (relations, scopes...) and database-related code.
   - Huge business logic should be written into `Support` or `Action` classes.
-- Use `$fillable` instead of `$guarded` because of higher security.
-- Use [Mass Assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
+- Use [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
+- Prefer `$fillable` over `$guarded` because of higher security.
 
 ## Structure
 
@@ -68,11 +67,20 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 - **Lifecycle methods** - `boot()`, `booted()`
 - **Relationships** - belongs, has, morphs…
 - **Accessors & mutators**
-- **Everything else**
+- **Other methods**
 
 # Controller
 
+Controllers handle requests and responses. In fact, they are intermediaries between the database, views, and business logic.
+
 **Create command:** `php artisan make:controller UserController`
+
+```php
+class UserController extends Controller
+{
+  //
+}
+```
 
 ## Naming
 
@@ -80,8 +88,10 @@ Singular with "Controller" suffix (`UserController`, `ProductController`, `Categ
 
 ## Best practices
 
-- Don’t put advanced code logic inside, only use them for data returning or resolving actions.
-- When you need an extra method in the resource, you should put it inside the resource controller and register a separate route.
+- Keep controller methods thin.
+  - They should not contain huge business logic.
+  - They are mainly responsible for one thing - returning a response.
+- For `CRUD` operations you should use [resource controllers](https://laravel.com/docs/controllers#resource-controllers)
 
 ## Types
 
@@ -128,7 +138,9 @@ class StoreUserRequest extends FormRequest
      */
     public function rules()
     {
-        return ['name' => 'required'];
+        return [
+          //
+        ];
     }
 }
 ```

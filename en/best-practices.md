@@ -118,7 +118,7 @@ public function store(StoreUserRequest $request): JsonResponse
 
 ## Models should contain only database-related things.
 
-Don't put there your huge business logic, it should be written in `Support` classes instead.
+Don't put there your huge business logic, it should be written in `Support` or `Action` classes instead.
 
 ---
 
