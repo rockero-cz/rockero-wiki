@@ -241,3 +241,71 @@ public function deleting(Order $order): void
     $order->products()->delete();
 }
 ```
+
+# Event
+
+Events are a way to trigger and handle actions that occur during the execution of your application. They are used in combination with listeners.
+
+When an event is dispatched, Laravel will notify all registered listeners for that event, giving them a chance to perform any necessary actions. [Read more](https://laravel.com/docs/events)
+
+> We primarily use actions instead of events because they are more simple and understandable. However, we use still events for some notifications or in combination with [websockets](https://laravel.com/docs/broadcasting).
+
+**Create command:** `php artisan make:event OrderCreated`
+
+```php
+class OrderCreated
+{
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    /**
+     * Create a new event instance.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Get the channels the event should broadcast on.
+     */
+    public function broadcastOn(): Channel|array
+    {
+        return new PrivateChannel('channel-name');
+    }
+}
+```
+
+## Dispatching events
+
+```php
+OrderCreated::dispatch();
+
+// or
+
+event(new OrderCreated());
+```
+
+## Listeners
+
+**Create command:** `php artisan make:listener SendOrderCreatedNotification --event=OrderCreated`
+
+```php
+class SendOrderCreatedNotification
+{
+    /**
+     * Create the event listener.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the event.
+     */
+    public function handle(OrderCreated $event): void
+    {
+        //
+    }
+}
+```
