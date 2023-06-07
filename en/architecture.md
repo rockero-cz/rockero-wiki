@@ -10,9 +10,10 @@ Singular without “Model” suffix (`User`, `Product`, `Category`...)
 
 - Follow the defined structure.
 - Methods should be tiny and clean.
-- Models should contains only Laravel native things (relations, scopes...) and database-associated code.
+- Models should contains only Laravel native things (relations, scopes...) and database-related code.
   - Huge business logic should be written into `Support` or `Action` classes.
 - Use `$fillable` instead of `$guarded` because of greater security.
+- Use [Mass Assignemnt](https://laravel.com/docs/eloquent#mass-assignment) where possible.
 
 ## Structure
 
