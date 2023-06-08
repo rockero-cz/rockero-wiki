@@ -1,6 +1,6 @@
 # Obsah
 
-- [Naming sloupců](#naming-sloupců)
+- [Pojmenování sloupců](#pojmenování-sloupců)
   - [Názvy pro často používané sloupce](#názvy-pro-často-používané-sloupce)
   - [Názvy podle datového typu sloupce](#názvy-podle-datového-typu-sloupce)
 - [Řazení sloupců](#řazení-sloupců)
@@ -9,9 +9,9 @@
 - [Migrace](#migrace)
   - [Best practices](#best-practices)
 - [Seedery](#seedery)
-  - [Naming](#naming)
+  - [Pojmenování](#pojmenování)
 - [Factories](#factories)
-  - [Naming](#naming-1)
+  - [Pojmenování](#pojmenování-1)
   - [Ukázky použití](#ukázky-použití)
   - [Factory metody](#factory-metody)
   - [Vlastní metody](#vlastní-metody)
@@ -19,7 +19,7 @@
 
 ---
 
-## Naming sloupců
+## Pojmenování sloupců
 
 - Primární klíč by měl vždy být `id`
 - Cizí klíče by měly být zapsány v jednotném čísle a s příponou `_id` (`user_id`, `product_id`, `category_id`...)
@@ -80,7 +80,7 @@ Použitím seedru můžete rychle naplnit databázi potřebnými daty, aniž bys
 
 > **Pro tip:** Někdy je třeba v seederech vypnout eventy modelu. To lze jednoduše provést pomocí traitu `WithoutModelEvents`. [Více informací](https://laravel.com/docs/seeding#muting-model-events)
 
-## Naming
+## Pojmenování
 
 Jednotné číslo s příponou "Seeder" (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
 
@@ -108,7 +108,7 @@ class ProductFactory extends Factory
 }
 ```
 
-## Naming
+## Pojmenování
 
 Název modelu s příponou "Factory" (`UserFactory`, `ProductFactory`, `CategoryFactory`...)
 

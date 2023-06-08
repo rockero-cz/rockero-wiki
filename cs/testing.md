@@ -10,7 +10,7 @@
   - [Vlastní metody](#vlastní-metody)
   - [Mocking](#mocking)
   - [Fixtures](#fixtures)
-  - [Naming](#naming)
+  - [Pojmenování](#pojmenování)
 
 ---
 
@@ -148,7 +148,7 @@ $payment = base_path('tests/fixtures/payment.xml');
 app(ProcessPaymentAction::class)->run($payment, ...);
 ```
 
-## Naming
+## Pojmenování
 
 Pro zajištění správného pojmenování vašich testovacích případů se doporučuje postupovat podle poskytnutého příkladu.
 

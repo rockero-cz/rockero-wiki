@@ -1,30 +1,32 @@
 # Obsah
 
+**Oprava:**
+
 - [Model](#model)
-  - [Naming](#naming)
-  - [Best practices](#best-praktiky)
+  - [Pojmenování](#pojmenování)
+  - [Best practices](#best-practices)
   - [Struktura](#struktura)
 - [Controller](#controller)
-  - [Naming](#naming-1)
+  - [Pojmenování](#pojmenování-1)
   - [Typy](#typy)
-  - [Best practices](#best-praktiky-1)
+  - [Best practices](#best-practices-1)
   - [Namespacing](#namespacing)
 - [Request](#request)
-  - [Naming](#naming-2)
+  - [Pojmenování](#pojmenování-2)
 - [Konfigurace](#konfigurace)
-  - [Best practices](#best-praktiky-2)
+  - [Best practices](#best-practices-2)
 - [Action](#action)
-  - [Naming](#naming-3)
-  - [Best practices](#best-praktiky-3)
+  - [Pojmenování](#pojmenování-3)
+  - [Best practices](#best-practices-3)
 - [Support](#support)
-  - [Naming](#naming-4)
+  - [Pojmenování](#pojmenování-4)
 - [Routing](#routing)
   - [Typy tras](#typy-tras)
-  - [Best practices](#best-praktiky-4)
+  - [Best practices](#best-practices-4)
 - [Middleware](#middleware)
   - [Ukázky použití](#ukázky-použití)
 - [Observer](#observer)
-  - [Naming](#naming-5)
+  - [Pojmenování](#pojmenování-5)
   - [Ukázky použití](#ukázky-použití-1)
 - [Event](#event)
   - [Vyvolání eventů](#vyvolání-eventů)
@@ -49,7 +51,7 @@ class Product extends Model
 }
 ```
 
-## Naming
+## Pojmenování
 
 Jednotné číslo bez přípony "Model" (`User`, `Product`, `Category`...)
 
@@ -82,7 +84,7 @@ class UserController extends Controller
 }
 ```
 
-## Naming
+## Pojmenování
 
 Jednotné číslo s příponou "Controller" (`UserController`, `ProductController`, `CategoryController`...)
 
@@ -141,7 +143,7 @@ class StoreUserRequest extends FormRequest
 }
 ```
 
-## Naming
+## Pojmenování
 
 Název metody s názvem modelu v jednotném čísle a příponou "Request" (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
 
@@ -177,7 +179,7 @@ class VerifyUserAction
 
 > **Tip:** Tento příkaz není součástí frameworku Laravel, nainstalujte si balíček `rockero-cz/laravel-starter-kit`.
 
-## Naming
+## Pojmenování
 
 Název akce s příponou "Action" (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
 
@@ -206,7 +208,7 @@ class Cart
 
 > **Tip:** Tento příkaz není součástí frameworku Laravel, nainstalujte si balíček `rockero-cz/laravel-starter-kit`.
 
-## Naming
+## Pojmenování
 
 Název supportu bez přípony "Support" (`Cart`, `OpeningHours`, `Table`...)
 
@@ -287,7 +289,7 @@ class UserObserver
 }
 ```
 
-## Naming
+## Pojmenování
 
 Jméno modelu v jednotném čísle s příponou "Observer" (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
 
