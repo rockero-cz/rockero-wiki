@@ -22,7 +22,7 @@
 ## Column Naming
 
 - Primary key should be always `id`
-- Foreign keys should be a singular with the suffix id (`user_id`, `product_id`, `category_id`...)
+- Foreign keys should be a singular with the suffix `_id` (`user_id`, `product_id`, `category_id`...)
 - When choosing a name you should be careful with [reserved words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
 
 ### Names for frequently used columns:
@@ -36,7 +36,7 @@
 - **boolean** - `is_enabled`, `has_reviews`
 - **timestamp** - `published_at`, `valid_from`, `scheduled_for`
 
-> **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from is_finished to finished_at). There is a benefit that you have in fact two pieces of information in one column.
+> **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from `is_finished` to `finished_at`). There is a benefit that you have in fact two pieces of information in one column.
 
 ## Column Sorting
 
@@ -47,7 +47,7 @@
 
 ## UUIDs
 
-Secure alternative to ids. They should be used for publicly accessible websites or for some tables with sensitive content (bank accounts, orders, invoices...). [How to use uuids?](https://laravel.com/docs/eloquent#uuid-and-ulid-keys)
+Secure alternative to ids. They should be used for publicly accessible websites or for some tables with sensitive content (bank accounts, orders, invoices...). [How to use UUIDs?](https://laravel.com/docs/eloquent#uuid-and-ulid-keys)
 
 ## Indexes
 
@@ -267,7 +267,7 @@ Client::factory()
 
 Factory callbacks can be used to perform an action after making or creating a model.
 
-These methods are defined inside configure method on factory class.
+These methods are defined inside `configure()` method on factory class.
 
 ```php
 public function configure(): static
