@@ -3,8 +3,8 @@
 - [Testing](#testing)
   - [Why write tests?](#why-write-tests)
   - [When to write tests?](#when-to-write-tests)
-  - [How do we write tests?](#how-do-we-write-tests)
   - [What should be tested?](#what-should-be-tested)
+  - [How to write tests?](#how-to-write-tests)
   - [Helpers](#helpers)
   - [Pest hooks](#pest-hooks)
   - [Custom methods](#custom-methods)
@@ -68,7 +68,7 @@ Helpers can reduce code duplication and improve test readability. You can use `P
 
 ## Custom methods
 
-These methods can be written in a single test suite or directly in Pest.php to access them globally.
+These methods can be written in a single test suite or directly in `Pest.php` to access them globally.
 
 **Example of local helper in a single test suite:**
 
@@ -85,7 +85,7 @@ it('can manage users', function () {
 })
 ```
 
-**Example of global helper in Pest.php:**
+**Example of global helper in `Pest.php`:**
 
 ```php
 function mockPayments(): object

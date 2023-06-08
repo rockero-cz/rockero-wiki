@@ -1,4 +1,4 @@
-# Table of Contents
+# Obsah
 
 - [Obecné](#obecné)
 - [Jmenné konvence](#jmenné-konvence)
