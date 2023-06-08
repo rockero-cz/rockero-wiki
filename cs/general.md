@@ -2,9 +2,9 @@
 
 - [Obecné](#obecné)
 - [Jmenné konvence](#jmenné-konvence)
-  - [Naming tříd](#naming-tříd)
-  - [Naming kódu](#naming-kódu)
-  - [Naming databáze](#naming-databáze)
+  - [Pojmenování tříd](#pojmenování-tříd)
+  - [Pojmenování v kódu](#pojmenování-v-kódu)
+  - [Pojmenování v databázi](#pojmenování-v-databázi)
 - [Struktura](#struktura)
   - [Struktura třídy](#struktura-třídy)
 - [Komentování](#komentování)
@@ -20,9 +20,9 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 
 # Jmenné konvence
 
-## Naming tříd
+## Pojmenování tříd
 
-| Třída        | Naming                                            | Příklad                                                                              |
+| Třída        | Pojmenování                                       | Příklad                                                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Action       | název akce s příponou "Action"                    | `CreateUserAction`, `DeleteProductAction`, `UpdateCategoryAction`                    |
 | Command      | název příkazu bez přípony                         | `GenerateReport`, `ImportData`, `ExportData`                                         |
@@ -45,18 +45,18 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Support      | název supportu bez přípony                        | `OpeningHours`, `Cart`, `Table`                                                      |
 | Trait        | přídavné jméno/předpona "with" bez přípony        | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
 
-## Naming kódu
+## Pojmenování v kódu
 
-| Entita     | Naming                        | Příklad                                             |
+| Entita     | Pojmenování                   | Příklad                                             |
 | ---------- | ----------------------------- | --------------------------------------------------- |
 | Method     | camelCase                     | `store`, `massDestroy`, `run`                       |
 | Property   | snake_case                    | `is_active`, `created_at`                           |
 | Route      | lowercase - množné číslo      | `users`, `products`, `categories`                   |
 | Route name | snake_case - s 'dot' notation | `users.show`, `products.index`, `categories.create` |
 
-## Naming databáze
+## Pojmenování v databázi
 
-| Entita       | Naming                                      | Příklad                                |
+| Entita       | Pojmenování                                 | Příklad                                |
 | ------------ | ------------------------------------------- | -------------------------------------- |
 | Table        | snake_case - množné číslo                   | `users`, `products`, `categories`      |
 | Pivot table  | snake_case - název modelů abecedně          | `category_product`, `order_user`       |
