@@ -57,7 +57,7 @@ Indexy jsou struktury databáze, které umožňují rychlejší získávání da
 
 # Migrace
 
-Migrace jsou způsob verzování schématu vaší databáze. Umožňují vám provádět změny v databázovém schématu strukturovaným způsobem a umožňují vám snadno vrátit změny zpět, pokud je to nutné. [Více informací](https://laravel.com/docs/migrations)
+Migrace jsou způsob verzování schématu vaší databáze. Umožňují vám provádět změny v schématu Vaší databáze přehledným způsobem a umožňují Vám také snadný způsob jak vrátit změny zpět, když je to nutné. [Více informací](https://laravel.com/docs/migrations)
 
 ## Best practices
 
