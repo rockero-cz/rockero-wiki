@@ -149,7 +149,7 @@ Method name with singular model name and with "Request" suffix (`StoreUserReques
 
 Configurations are always stored in the `config` directory.
 
-> **Pro tip:** You should never access the `env()` method directly in application. You should use it only in configuration files and access it by `config()` method.
+> **Warning:** You should never access the `env()` method directly in application. You should use it only in configuration files and access it by `config()` method.
 
 ## Best practices
 
@@ -303,13 +303,13 @@ public function saved(InvoiceItem $invoiceItem): void
 // Set default state when the order is created.
 public function creating(Order $order): void
 {
-    $order->state = OrderState::NEW;
+  $order->state = OrderState::NEW;
 }
 
 // Delete relations before the model is deleted.
 public function deleting(Order $order): void
 {
-    $order->products()->delete();
+  $order->products()->delete();
 }
 ```
 

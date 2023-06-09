@@ -151,7 +151,7 @@ Název metody s názvem modelu v jednotném čísle a příponou "Request" (`Sto
 
 Konfigurace jsou vždy uloženy v adresáři `config`.
 
-> **Pro tip:** Metodu `env()` byste nikdy neměli volat přímo v aplikaci. Měli byste ji používat pouze v konfiguračních souborech a přistupovat k ní pomocí metody `config()`.
+> **Varování:** Metodu `env()` byste nikdy neměli volat přímo v aplikaci. Měli byste ji používat pouze v konfiguračních souborech a přistupovat k ní pomocí metody `config()`.
 
 ## Best practices
 
@@ -305,13 +305,13 @@ public function saved(InvoiceItem $invoiceItem): void
 // Set default state when the order is created.
 public function creating(Order $order): void
 {
-    $order->state = OrderState::NEW;
+  $order->state = OrderState::NEW;
 }
 
 // Delete relations before the model is deleted.
 public function deleting(Order $order): void
 {
-    $order->products()->delete();
+  $order->products()->delete();
 }
 ```
 

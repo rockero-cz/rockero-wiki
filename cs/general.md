@@ -25,13 +25,13 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Třída        | Pojmenování                                       | Příklad                                                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Action       | název akce s příponou "Action"                    | `CreateUserAction`, `DeleteProductAction`, `UpdateCategoryAction`                    |
-| Command      | název příkazu bez přípony                         | `GenerateReport`, `ImportData`, `ExportData`                                         |
+| Command      | název příkazu s příponou "Command"                | `GenerateReportCommand`, `ImportDataCommand`, `ExportDataCommand`                    |
 | Controller   | jednotné číslo s příponou "Controller"            | `UserController`, `ProductController`, `CategoryController`                          |
 | Data         | jednotné číslo s příponou "Data"                  | `UserData`, `ProductData`, `CategoryData`                                            |
-| Event        | název eventu bez přípony                          | `UserCreated`, `OrderCreated`, `OrderShipped`                                        |
+| Event        | název eventu s příponou "Event"                   | `UserCreatedEvent`, `OrderCreatedEvent`, `OrderShippedEvent`                         |
 | Exception    | jednotné číslo s příponou "Exception"             | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
 | Interface    | přídavné jméno/podstatné jméno bez přípony        | `Loggable`, `Configurable`, `Exportable`                                             |
-| Job          | název jobu bez přípony                            | `SendEmail`, `ProcessPayment`, `GenerateReport`                                      |
+| Job          | název jobu bez s příponou "Job"                   | `SendEmailJob`, `ProcessPaymentJob`, `GenerateReportJob`                             |
 | Mail         | název mailu bez přípony                           | `WelcomeEmail`, `OrderConfirmationMail`, `NewsletterMail`                            |
 | Middleware   | název middlewaru bez přípony                      | `Authentication`, `RateLimit`, `Cors`                                                |
 | Model        | jednotné číslo bez přípony                        | `User`, `Product`, `Category`                                                        |
@@ -47,12 +47,14 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 
 ## Pojmenování v kódu
 
-| Entita     | Pojmenování                   | Příklad                                             |
-| ---------- | ----------------------------- | --------------------------------------------------- |
-| Method     | camelCase                     | `store`, `massDestroy`, `run`                       |
-| Property   | snake_case                    | `is_active`, `created_at`                           |
-| Route      | lowercase - množné číslo      | `users`, `products`, `categories`                   |
-| Route name | snake_case - s 'dot' notation | `users.show`, `products.index`, `categories.create` |
+| Entita         | Pojmenování                   | Příklad                                             |
+| -------------- | ----------------------------- | --------------------------------------------------- |
+| Method         | camelCase                     | `store`, `massDestroy`, `run`                       |
+| Model Property | snake_case                    | `is_active`, `created_at`                           |
+| Class Property | camelCase                     | `$isActive`, `$createdAt`                           |
+| Variable       | camelCase                     | `$isActive`, `$createdAt`                           |
+| Route          | lowercase - množné číslo      | `users`, `products`, `categories`                   |
+| Route name     | snake_case - s 'dot' notation | `users.show`, `products.index`, `categories.create` |
 
 ## Pojmenování v databázi
 
