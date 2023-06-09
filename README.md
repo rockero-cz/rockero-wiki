@@ -8,6 +8,9 @@
 
 # Rockero wiki
 
+[![Rockero](https://img.shields.io/badge/Rockero-yellow)](https://rockero.cz)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+
 A
 
 ---
