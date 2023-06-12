@@ -11,7 +11,7 @@
 [![Rockero](https://img.shields.io/badge/Rockero-yellow)](https://rockero.cz)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-Since we are moving the Laravel community in the `Czech Republic` and `Slovakia` to the next level, we decided to share this **Wiki** not only about Laravel.
+Since we are taking the Laravel community in the `Czech Republic` and `Slovakia` to the next level, we decided to share this **Wiki** not only about Laravel.
 
 Most of the sections were our internal best-practices and tips. However, we decided to share them with others to help the local community grow.
 
