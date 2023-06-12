@@ -15,7 +15,7 @@
 
 ## Přijměte standardy a principy a dodržujte je.
 
-Kód se pak snadněji udržuje a také se zlepšuje jeho čitelnost a konzistenci.
+Kód se pak snadněji udržuje a také se zlepšuje jeho čitelnost a konzistence.
 
 Pokud nevíte, jak napsat specifickou část kódu, tak zkuste trochu hledat - ponořte se hlouběji do codebase Laravelu, procházejte repozitáře s hodně hvězdičkami na GitHubu, a nebo prozkoumejte zdrojový kód znamých balíčků.
 
