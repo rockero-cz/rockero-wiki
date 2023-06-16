@@ -1,6 +1,6 @@
-# Table of Contents
+# General
 
-- [General](#general)
+- [Introduction](#introduction)
 - [Naming Conventions](#naming-conventions)
   - [Class naming](#class-naming)
   - [Code naming](#code-naming)
@@ -14,13 +14,19 @@
 
 ---
 
-# General
+<a name="introduction"></a>
+
+## Introduction
 
 When writing code, it is important to keep in mind some general principles and standards that can help improve its quality and readability.
 
-# Naming Conventions
+<a name="naming-conventions"></a>
 
-## Class naming
+## Naming Conventions
+
+<a name="class-naming"></a>
+
+### Class naming
 
 | Class        | Naming                                                     | Example                                                                              |
 | ------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -45,7 +51,9 @@ When writing code, it is important to keep in mind some general principles and s
 | Support      | support name without suffix                                | `OpeningHours`, `Cart`, `Table`                                                      |
 | Trait        | adjective/prefix "with" without suffix                     | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
 
-## Code naming
+<a name="code-naming"></a>
+
+### Code naming
 
 | Entity         | Naming                           | Example                                             |
 | -------------- | -------------------------------- | --------------------------------------------------- |
@@ -56,7 +64,9 @@ When writing code, it is important to keep in mind some general principles and s
 | Route          | lowercase - plural               | `users`, `products`, `categories`                   |
 | Route name     | snake_case - with 'dot' notation | `users.show`, `products.index`, `categories.create` |
 
-## Database naming
+<a name="database-naming"></a>
+
+### Database naming
 
 | Entity       | Naming                                              | Example                                |
 | ------------ | --------------------------------------------------- | -------------------------------------- |
@@ -66,9 +76,13 @@ When writing code, it is important to keep in mind some general principles and s
 | Primary key  | id                                                  | `id`                                   |
 | Foreign key  | snake_case - singular model name with "\_id" suffix | `user_id`, `product_id`, `category_id` |
 
-# Structure
+<a name="structure"></a>
 
-## Class structure
+## Structure
+
+<a name="class-structure"></a>
+
+### Class structure
 
 When organizing code in the class, it is best to follow this order:
 
@@ -106,9 +120,13 @@ private function methodD() {}
 abstract public function methodE() {}
 ```
 
-# Commenting
+<a name="commenting"></a>
 
-## Attributes
+## Commenting
+
+<a name="attributes"></a>
+
+### Attributes
 
 - Native attributes from Laravel (e.g. `$fillable`) should have been without comment.
 - Also without a type hint because you will never access the property
@@ -130,7 +148,9 @@ public int $count = 0;
 public int $clickCount = 0;
 ```
 
-## Methods
+<a name="methods"></a>
+
+### Methods
 
 - Comment all methods
 
@@ -144,6 +164,8 @@ public function index()
 }
 ```
 
-## Code
+<a name="code"></a>
+
+### Code
 
 - Comment all unclear logic - e.g. many statements

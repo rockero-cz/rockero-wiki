@@ -1,26 +1,32 @@
-# Obsah
+# Obecné
 
-- [Obecné](#obecné)
-- [Jmenné konvence](#jmenné-konvence)
-  - [Pojmenování tříd](#pojmenování-tříd)
-  - [Pojmenování v kódu](#pojmenování-v-kódu)
-  - [Pojmenování v databázi](#pojmenování-v-databázi)
-- [Struktura](#struktura)
-  - [Struktura třídy](#struktura-třídy)
-- [Komentování](#komentování)
-  - [Atributy](#atributy)
-  - [Metody](#metody)
-  - [Kód](#kód)
+- [Úvod](#introduction)
+- [Jmenné konvence](#naming-conventions)
+  - [Pojmenování tříd](#class-naming)
+  - [Pojmenování v kódu](#code-naming)
+  - [Pojmenování v databázi](#database-naming)
+- [Struktura](#structure)
+  - [Struktura třídy](#class-structure)
+- [Komentování](#commenting)
+  - [Atributy](#attributes)
+  - [Metody](#methods)
+  - [Kód](#code)
 
 ---
 
-# Obecné
+<a name="introduction"></a>
+
+## Úvod
 
 Při psaní kódu je důležité mít na paměti některé obecné zásady a standardy, které mohou pomoci zlepšit jeho kvalitu a čitelnost.
 
-# Jmenné konvence
+<a name="naming-conventions"></a>
 
-## Pojmenování tříd
+## Jmenné konvence
+
+<a name="class-naming"></a>
+
+### Pojmenování tříd
 
 | Třída        | Pojmenování                                       | Příklad                                                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -45,7 +51,9 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Support      | název supportu bez přípony                        | `OpeningHours`, `Cart`, `Table`                                                      |
 | Trait        | přídavné jméno/předpona "with" bez přípony        | `Sortable`, `Searchable`, `Filterable`, `WithForm`, `WithSorting`, `WithFileUploads` |
 
-## Pojmenování v kódu
+<a name="code-naming"></a>
+
+### Pojmenování v kódu
 
 | Entita         | Pojmenování                   | Příklad                                             |
 | -------------- | ----------------------------- | --------------------------------------------------- |
@@ -56,7 +64,9 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Route          | lowercase - množné číslo      | `users`, `products`, `categories`                   |
 | Route name     | snake_case - s 'dot' notation | `users.show`, `products.index`, `categories.create` |
 
-## Pojmenování v databázi
+<a name="database-naming"></a>
+
+### Pojmenování v databázi
 
 | Entita       | Pojmenování                                 | Příklad                                |
 | ------------ | ------------------------------------------- | -------------------------------------- |
@@ -66,9 +76,13 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Primary key  | id                                          | `id`                                   |
 | Foreign key  | snake_case - název modelu s příponou "\_id" | `user_id`, `product_id`, `category_id` |
 
-# Struktura
+<a name="structure"></a>
 
-## Struktura třídy
+## Struktura
+
+<a name="class-structure"></a>
+
+### Struktura třídy
 
 Při organizaci kódu v třídě je nejlepší dodržovat následující pořadí:
 
@@ -106,9 +120,13 @@ private function methodD() {}
 abstract public function methodE() {}
 ```
 
-# Komentování
+<a name="commenting"></a>
 
-## Atributy
+## Komentování
+
+<a name="attributes"></a>
+
+### Atributy
 
 - Nativní atributy Laravelu (např. `$fillable`) by měly být bez komentáře.
 - Také bez type hintu, protože k proměnné nikdy nebudete přistupovat.
@@ -130,7 +148,9 @@ public int $count = 0;
 public int $clickCount = 0;
 ```
 
-## Metody
+<a name="methods"></a>
+
+### Metody
 
 - Komentujte všechny metody
 
@@ -144,6 +164,8 @@ public function index()
 }
 ```
 
-## Kód
+<a name="code"></a>
+
+### Kód
 
 - Komentujte všechnu méně srozumitelnou logiku, např. hodně podmínek

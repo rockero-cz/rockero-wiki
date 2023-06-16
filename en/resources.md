@@ -1,13 +1,15 @@
-# Table of Contents
+# Resources
 
-- [Websites & Blogs](#websites--blogs)
+- [Websites & Blogs](#websites-and-blogs)
 - [Recommended Courses](#recommended-courses)
 - [Recommended Books](#recommended-books)
 - [Recommended Twitter Accounts](#recommended-twitter-accounts)
 
 ---
 
-### Websites & Blogs
+<a name="websites-and-blogs"></a>
+
+## Websites & Blogs
 
 - [https://spatie.be/guideliness](https://spatie.be/guideliness)
 - [https://laravel-news.com/blog](https://laravel-news.com/blog)
@@ -23,9 +25,9 @@
 - [https://crynobone.com](https://crynobone.com)
 - [https://stitcher.io](https://stitcher.io)
 
----
+<a name="recommended-courses"></a>
 
-### Recommended Courses
+## Recommended Courses
 
 - [https://writing-readable-php.com](https://writing-readable-php.com)
 - [https://testing-laravel.com](https://testing-laravel.com)
@@ -33,9 +35,9 @@
 - [https://laravel-livewire.com/screencasts](https://laravel-livewire.com/screencasts/installation)
 - [https://www.youtube.com/c/laraveldaily](https://www.youtube.com/c/laraveldaily)
 
----
+<a name="recommended-books"></a>
 
-### Recommended Books
+## Recommended Books
 
 - [https://learn-laravel-queues.com](https://learn-laravel-queues.com)
 - [https://spatie.be/products/front-line-php](https://spatie.be/products/front-line-php)
@@ -44,9 +46,9 @@
 - [https://refactoring.guru](https://refactoring.guru)
 - [https://laravelsecrets.com](https://laravelsecrets.com)
 
----
+<a name="recommended-twitter-accounts"></a>
 
-### Recommended Twitter Accounts
+## Recommended Twitter Accounts
 
 - [https://twitter.com/taylorotwell](https://twitter.com/taylorotwell)
 - [https://twitter.com/gonedark](https://twitter.com/gonedark)
@@ -73,5 +75,3 @@
 - [https://twitter.com/freekmurze](https://twitter.com/freekmurze)
 - [https://twitter.com/spatie_be](https://twitter.com/spatie_be)
 - [https://twitter.com/PovilasKorop](https://twitter.com/PovilasKorop)
-
----

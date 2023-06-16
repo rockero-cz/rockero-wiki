@@ -1,20 +1,22 @@
-# Obsah
+# Testování
 
-- [Testování](#testování)
-  - [Proč psát testy?](#proč-psát-testy)
-  - [Kdy psát testy?](#kdy-psát-testy)
-  - [Co by mělo být testováno?](#co-by-mělo-být-testováno)
-  - [Jak psát testy?](#jak-psát-testy)
-  - [Helpery](#helpery)
-  - [Pest hooky](#pest-hooky)
-  - [Vlastní metody](#vlastní-metody)
-  - [Mocking](#mocking)
-  - [Fixtures](#fixtures)
-  - [Pojmenování](#pojmenování)
+- [Úvod](#introduction)
+- [Proč psát testy?](#why-write-tests)
+- [Kdy psát testy?](#when-to-write-tests)
+- [Co by mělo být testováno?](#what-should-be-tested)
+- [Jak psát testy?](#how-to-write-tests)
+- [Helpery](#helpers)
+- [Pest hooky](#pest-hooks)
+- [Vlastní metody](#custom-methods)
+- [Mocking](#mocking)
+- [Fixtures](#fixtures)
+- [Pojmenování](#naming)
 
 ---
 
-# Testování
+<a name="introduction"></a>
+
+## Úvod
 
 Pro automatizované testování používáme framework [Pest](https://pestphp.com/) kvůli hodně jeho výhodám. `Pest` se soustředí na jednoduchost a psaní testů je s ním opravdu zábava.
 
@@ -30,6 +32,8 @@ it('has a welcome page', function() {
 });
 ```
 
+<a name="why-write-tests"></a>
+
 ## Proč psát testy?
 
 - **Kvalita kódu** - psání testů Vás donutí nad kódem přemýšlet
@@ -37,15 +41,21 @@ it('has a welcome page', function() {
 - **Úspora času** - v dlouhodobém měřítku testy snižují potřeby manuálního testování
 - **Větší jistota** - je snazší provádět změny v kódu a přidávat nové funkce, jelikož je malé rizitiko zničení funkcionality
 
+<a name="when-to-write-tests"></a>
+
 ## Kdy psát testy?
 
 Každá vytvořená třída obsahující nějakou logiku by měla mít také test.
+
+<a name="what-should-be-tested"></a>
 
 ## Co by mělo být testováno?
 
 - Logika v kódu (akce, support třídy, joby…)
 - Livewire komponenty / Controllery
 - Routy
+
+<a name="how-to-write-tests"></a>
 
 ## Jak psát testy?
 
@@ -55,9 +65,13 @@ Při psaní testů je důležité zahrnout několik scénářů, aby se pokrylo 
 
 > **Pro tip:** Udržujte pokrytí testy co nejvyšší, mělo by to být alespoň 70 %.
 
+<a name="helpers"></a>
+
 ## Helpery
 
 Helpery mohou snížit duplicitu v kódu a zlepšit čitelnost testů. Pomocí `Pest` hooků můžete připravovat/čistit data před/po každém/všech spuštění testů. Kromě toho můžete vytvářet vlastní metody, které lze použít v několika testech.
+
+<a name="pest-hooks"></a>
 
 ## Pest hooky
 
@@ -65,6 +79,8 @@ Helpery mohou snížit duplicitu v kódu a zlepšit čitelnost testů. Pomocí `
 - **`afterEach()`** - Vyčistí testovací data po jednotlivém spuštění testu…
 - **`beforeAll()`** - Připraví něco před spuštěním všech testů…
 - **`afterAll()` -** - Vyčistí testovací data po spuštění všech testů…
+
+<a name="custom-methods"></a>
 
 ## Vlastní metody
 
@@ -99,6 +115,8 @@ it('may buy a book', function () {
   $client = mockPayments();
 })
 ```
+
+<a name="mocking"></a>
 
 ## Mocking
 
@@ -136,6 +154,8 @@ mock(Client::class)
 
 > **Pro tip:** V případě, že vytváříte mock pro integraci externího API, měli byste také zajistit, že vaše testy netrefují oficiální endpointy - v Laravelu můžete zabránit těmto přímým requestům pomocí metody `Http::preventStrayRequests()`. Po zavolání této metody vyhodí každý test bez odpovídajícího mocku výjimku. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
 
+<a name="fixtures"></a>
+
 ## Fixtures
 
 Fixtures jsou statické soubory používané pro testování a měly by být umístěny v adresáři "fixtures". Mohou být použity v testech k simulaci skutečných zdrojů dat nebo k poskytnutí specifických podmínek pro testování.
@@ -147,6 +167,8 @@ $payment = base_path('tests/fixtures/payment.xml');
 
 app(ProcessPaymentAction::class)->run($payment, ...);
 ```
+
+<a name="naming"></a>
 
 ## Pojmenování
 

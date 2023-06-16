@@ -1,4 +1,4 @@
-# Table of Contents
+# Best practices
 
 - [Accept the standards and principles and follow them.](#accept-the-standards-and-principles-and-follow-them)
 - [Duplicated code is preferred over the **wrong** abstraction.](#duplicated-code-is-preferred-over-the-wrong-abstraction)
@@ -13,6 +13,8 @@
 
 ---
 
+<a name="accept-the-standards-and-principles-and-follow-them"></a>
+
 ## Accept the standards and principles and follow them.
 
 Code is then easier to maintain and it also improves readability and consistency.
@@ -25,6 +27,8 @@ If you don't how to write specific code, try to make some research - dig deeper 
 
 ---
 
+<a name="duplicated-code-is-preferred-over-the-wrong-abstraction"></a>
+
 ## Duplicated code is preferred over the **wrong** abstraction.
 
 If you stumble, fixing a bad abstraction can cost you a lot of time.
@@ -32,6 +36,8 @@ If you stumble, fixing a bad abstraction can cost you a lot of time.
 Better wait a while and make refactor when you are confident with the abstraction.
 
 ---
+
+<a name="keep-test-coverage-as-high-as-possible"></a>
 
 ## Keep test coverage as high as possible.
 
@@ -43,6 +49,8 @@ php artisan test --coverage --min=80
 
 ---
 
+<a name="use-static-analysis-to-keep-code-high-quality"></a>
+
 ## Use static analysis to keep code high quality.
 
 We use [PHPStan](https://phpstan.org) and it catches all missing type hints and return types.
@@ -52,6 +60,8 @@ We use [PHPStan](https://phpstan.org) and it catches all missing type hints and 
 ```
 
 ---
+
+<a name="use-artisan-cli-for-creating-classes"></a>
 
 ## Use Artisan CLI for creating classes.
 
@@ -63,6 +73,8 @@ php artisan make:controller ProductController
 ```
 
 ---
+
+<a name="simplify-your-business-logic-with-action-classes"></a>
 
 ## Simplify your business logic with action classes.
 
@@ -83,6 +95,8 @@ class VerifyUserAction
 
 ---
 
+<a name="group-classes-into-subfolders-by-resources"></a>
+
 ## Group classes into subfolders by resources.
 
 The folder structure is more clean and more simplified to maintain.
@@ -97,6 +111,8 @@ The folder structure is more clean and more simplified to maintain.
 ```
 
 ---
+
+<a name="keep-controller-methods-thin"></a>
 
 ## Keep controller methods thin.
 
@@ -116,11 +132,15 @@ public function store(StoreUserRequest $request): JsonResponse
 
 ---
 
+<a name="models-should-contain-only-database-related-things"></a>
+
 ## Models should contain only database-related things.
 
 Don't put there your huge business logic, it should be written in `Support` or `Action` classes instead.
 
 ---
+
+<a name="never-update-the-database-directly-always-use-migrations"></a>
 
 ## Never update the database directly, always use migrations.
 

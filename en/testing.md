@@ -1,6 +1,6 @@
-# Table of Contents
+# Testing
 
-- [Testing](#testing)
+- [Introduction](#introduction)
   - [Why write tests?](#why-write-tests)
   - [When to write tests?](#when-to-write-tests)
   - [What should be tested?](#what-should-be-tested)
@@ -14,7 +14,9 @@
 
 ---
 
-# Testing
+<a name="introduction"></a>
+
+# Introduction
 
 For automated testing, we use a framework [Pest](https://pestphp.com/) because of its many benefits. `Pest` focuses on simplicity and writing tests is really enjoyable with it.
 
@@ -30,6 +32,8 @@ it('has a welcome page', function() {
 });
 ```
 
+<a name="why-write-tests"></a>
+
 ## Why write tests?
 
 - **Code quality** - writing tests forces you to think about the code
@@ -37,15 +41,21 @@ it('has a welcome page', function() {
 - **Time saving** - in the long term, tests should reduce the need for manual testing
 - **Increased confidence** - it is easier to make changes and add new features because there is less risk of breaking functionality.
 
+<a name="when-to-write-tests"></a>
+
 ## When to write tests?
 
 Each created class containing some logic should also have a test.
+
+<a name="what-should-be-tested"></a>
 
 ## What should be tested?
 
 - Code logic (actions, support classes, jobs…)
 - Livewire components / Controllers
 - Routes
+
+<a name="how-to-write-tests"></a>
 
 ## How to write tests?
 
@@ -55,9 +65,13 @@ When writing tests, it is important to include multiple scenarios to cover most 
 
 > **Pro tip:** Keep your coverage as high as possible, it should be at least 70%.
 
+<a name="helpers"></a>
+
 ## Helpers
 
 Helpers can reduce code duplication and improve test readability. You can use `Pest` hooks to prepare/clean data before/after each/all test runs. Additionally, you can create custom methods that can be used in multiple tests.
+
+<a name="pest-hooks"></a>
 
 ## Pest hooks
 
@@ -65,6 +79,8 @@ Helpers can reduce code duplication and improve test readability. You can use `P
 - **`afterEach()`** - Clear testing data after each test run…
 - **`beforeAll()`** - Prepare something once before any of this file's tests run…
 - **`afterAll()` -** Clean testing data after all tests run…
+
+<a name="custom-methods"></a>
 
 ## Custom methods
 
@@ -99,6 +115,8 @@ it('may buy a book', function () {
   $client = mockPayments();
 })
 ```
+
+<a name="mocking"></a>
 
 ## Mocking
 
@@ -136,6 +154,8 @@ mock(Client::class)
 
 > **Pro tip:** In case you create a mock for external API integration, you should also ensure that you don't hit official endpoints with your tests - in Laravel you can prevent these stray requests with `Http::preventStrayRequests()`. After calling this method, each request without matching fake throws an exception. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
 
+<a name="fixtures"></a>
+
 ## Fixtures
 
 Fixtures are static files used for testing, and they should be placed inside the "fixtures" directory. They can be used in tests to simulate real data sources or to provide specific test conditions.
@@ -147,6 +167,8 @@ $payment = base_path('tests/fixtures/payment.xml');
 
 app(ProcessPaymentAction::class)->run($payment, ...);
 ```
+
+<a name="naming"></a>
 
 ## Naming
 

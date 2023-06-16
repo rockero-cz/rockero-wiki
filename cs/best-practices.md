@@ -1,17 +1,19 @@
-# Obsah
+# Best practices
 
-- [Přijměte standardy a principy a dodržujte je.](#přijměte-standardy-a-principy-a-dodržujte-je)
-- [Raději mít duplicitní kód než mít **špatnou** abstrakci.](#raději-mít-duplicitní-kód-než-mít-špatnou-abstrakci)
-- [Držte pokrytí testy co nejvyšší.](#držte-pokrytí-testy-co-nejvyšší)
-- [Používejte statickou analýzu k udržení vysoké kvality kódu.](#používejte-statickou-analýzu-k-udržení-vysoké-kvality-kódu)
-- [Používejte Artisan CLI k vytváření tříd.](#používejte-artisan-cli-k-vytváření-tříd)
-- [Zjednodušte svou business logiku pomocí akcí.](#zjednodušte-svou-business-logiku-pomocí-akcí)
-- [Seskupujte třídy do podsložek podle typu.](#seskupujte-třídy-do-podsložek-podle-typu)
-- [Držte metody controllerů krátké.](#držte-metody-controllerů-krátké)
-- [Modely by měly obsahovat pouze věci související s databází.](#modely-by-měly-obsahovat-pouze-věci-související-s-databází)
-- [Nikdy neupravujte databázi natvrdo, vždy používejte migrace.](#nikdy-neupravujte-databázi-natvrdo-vždy-používejte-migrace)
+- [Přijměte standardy a principy a dodržujte je.](#accept-the-standards-and-principles-and-follow-them)
+- [Raději mít duplicitní kód než mít **špatnou** abstrakci.](#duplicated-code-is-preferred-over-the-wrong-abstraction)
+- [Držte pokrytí testy co nejvyšší.](#keep-test-coverage-as-high-as-possible)
+- [Používejte statickou analýzu k udržení vysoké kvality kódu.](#use-static-analysis-to-keep-code-high-quality)
+- [Používejte Artisan CLI k vytváření tříd.](#use-artisan-cli-for-creating-classes)
+- [Zjednodušte svou business logiku pomocí akcí.](#simplify-your-business-logic-with-action-classes)
+- [Seskupujte třídy do podsložek podle typu.](#group-classes-into-subfolders-by-resources)
+- [Držte metody controllerů krátké.](#keep-controller-methods-thin)
+- [Modely by měly obsahovat pouze věci související s databází.](#models-should-contain-only-database-related-things)
+- [Nikdy neupravujte databázi natvrdo, vždy používejte migrace.](#never-update-the-database-directly-always-use-migrations)
 
 ---
+
+<a name="accept-the-standards-and-principles-and-follow-them"></a>
 
 ## Přijměte standardy a principy a dodržujte je.
 
@@ -25,6 +27,8 @@ Pokud nevíte, jak napsat specifickou část kódu, tak zkuste trochu hledat - p
 
 ---
 
+<a name="duplicated-code-is-preferred-over-the-wrong-abstraction"></a>
+
 ## Raději mít duplicitní kód, než **špatnou** abstrakci.
 
 Pokud narazíte, oprava špatné abstrakce Vás může stát hodně času.
@@ -32,6 +36,8 @@ Pokud narazíte, oprava špatné abstrakce Vás může stát hodně času.
 Je lepší počkat až budete mít jistotu ohledně abstrakce a pak se pustit do refaktorování.
 
 ---
+
+<a name="keep-test-coverage-as-high-as-possible"></a>
 
 ## Držte pokrytí testy co nejvyšší.
 
@@ -43,6 +49,8 @@ php artisan test --coverage --min=80
 
 ---
 
+<a name="use-static-analysis-to-keep-code-high-quality"></a>
+
 ## Používejte statickou analýzu k udržení vysoké kvality kódu.
 
 My používáme [PHPStan](https://phpstan.org), který za nás odhaluje chybějící typy a návratové hodnoty.
@@ -52,6 +60,8 @@ My používáme [PHPStan](https://phpstan.org), který za nás odhaluje chyběj�
 ```
 
 ---
+
+<a name="use-artisan-cli-for-creating-classes"></a>
 
 ## Používejte Artisan CLI k vytváření tříd.
 
@@ -63,6 +73,8 @@ php artisan make:controller ProductController
 ```
 
 ---
+
+<a name="simplify-your-business-logic-with-action-classes"></a>
 
 ## Zjednodušte svou business logiku pomocí akcí.
 
@@ -83,6 +95,8 @@ class VerifyUserAction
 
 ---
 
+<a name="group-classes-into-subfolders-by-resources"></a>
+
 ## Seskupujte třídy do podsložek podle typu.
 
 Struktura složek je čistší a snadnější na udržování.
@@ -97,6 +111,8 @@ Struktura složek je čistší a snadnější na udržování.
 ```
 
 ---
+
+<a name="keep-controller-methods-thin"></a>
 
 ## Držte metody controllerů krátké.
 
@@ -116,11 +132,15 @@ public function store(StoreUserRequest $request): JsonResponse
 
 ---
 
+<a name="models-should-contain-only-database-related-things"></a>
+
 ## Modely by měly obsahovat pouze věci související s databází.
 
 Nepište do nich rozsáhlou business logiku, ta by měla být raději napsána v třídách `Support` nebo `Action`.
 
 ---
+
+<a name="never-update-the-database-directly-always-use-migrations"></a>
 
 ## Nikdy neupravujte databázi natvrdo, vždy používejte migrace.
 

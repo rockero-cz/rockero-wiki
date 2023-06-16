@@ -1,40 +1,40 @@
-# Obsah
-
-**Oprava:**
+# Architektura
 
 - [Model](#model)
-  - [Pojmenování](#pojmenování)
+  - [Pojmenování](#naming)
   - [Best practices](#best-practices)
-  - [Struktura](#struktura)
+  - [Struktura](#structure)
 - [Controller](#controller)
-  - [Pojmenování](#pojmenování-1)
-  - [Typy](#typy)
+  - [Pojmenování](#naming-1)
+  - [Typy](#types)
   - [Best practices](#best-practices-1)
   - [Namespacing](#namespacing)
 - [Request](#request)
-  - [Pojmenování](#pojmenování-2)
-- [Konfigurace](#konfigurace)
+  - [Pojmenování](#naming-2)
+- [Konfigurace](#configuration)
   - [Best practices](#best-practices-2)
 - [Action](#action)
-  - [Pojmenování](#pojmenování-3)
+  - [Pojmenování](#naming-3)
   - [Best practices](#best-practices-3)
 - [Support](#support)
-  - [Pojmenování](#pojmenování-4)
+  - [Pojmenování](#naming-4)
 - [Routing](#routing)
-  - [Typy tras](#typy-tras)
+  - [Typy tras](#route-types)
   - [Best practices](#best-practices-4)
 - [Middleware](#middleware)
-  - [Ukázky použití](#ukázky-použití)
+  - [Ukázky použití](#usage-example)
 - [Observer](#observer)
-  - [Pojmenování](#pojmenování-5)
-  - [Ukázky použití](#ukázky-použití-1)
+  - [Pojmenování](#naming-5)
+  - [Ukázky použití](#usage-example-1)
 - [Event](#event)
-  - [Vyvolání eventů](#vyvolání-eventů)
+  - [Vyvolání eventů](#dispatching-events)
   - [Listeners](#listeners)
 - [Command](#command)
-  - [Plánování příkazů](#plánování-příkazů)
+  - [Plánování příkazů](#scheduling-commands)
 
 ---
+
+<a name="model"></a>
 
 # Model
 
@@ -51,9 +51,13 @@ class Product extends Model
 }
 ```
 
+<a name="naming"></a>
+
 ## Pojmenování
 
 Jednotné číslo bez přípony "Model" (`User`, `Product`, `Category`...)
+
+<a name="best-practices"></a>
 
 ## Best practices
 
@@ -63,6 +67,8 @@ Jednotné číslo bez přípony "Model" (`User`, `Product`, `Category`...)
 - Používejte [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) všude, kde je to možné.
 - Preferujte `$fillable` před `$guarded`, kvůli vyšší bezpečnosti.
 
+<a name="structure"></a>
+
 ## Struktura
 
 - **Atributy** - `$fillable`, `$casts`…
@@ -70,6 +76,8 @@ Jednotné číslo bez přípony "Model" (`User`, `Product`, `Category`...)
 - **Vztahy** - belongs, has, morphs…
 - **Accessory & mutatory**
 - **Ostatní metody**
+
+<a name="controller"></a>
 
 # Controller
 
@@ -84,9 +92,13 @@ class UserController extends Controller
 }
 ```
 
+<a name="naming-1"></a>
+
 ## Pojmenování
 
 Jednotné číslo s příponou "Controller" (`UserController`, `ProductController`, `CategoryController`...)
+
+<a name="types"></a>
 
 ## Typy
 
@@ -94,12 +106,16 @@ Jednotné číslo s příponou "Controller" (`UserController`, `ProductControlle
 - **api** - obsahuje také metodu pro každou `CRUD` operaci, ale neobsahuje metody pro HTML šablony
 - **invokable** - controllery pro jednotlivé akce, které neodpovídají zdrojům
 
+<a name="best-practices-1"></a>
+
 ## Best practices
 
 - Udržujte metody controllerů krátké.
 - Neměly by obsahovat rozsáhlou business logiku.
 - Jsou hlavně zodpovědné za jednu věc - vrácení odpovědi.
 - Pro `CRUD` operace byste měli používat [resource controllery](https://laravel.com/docs/controllers#resource-controllers)
+
+<a name="namespacing"></a>
 
 ## Namespacing
 
@@ -111,6 +127,8 @@ Api/Admin/UserController.php
 Api/UserController.php
 UserController.php
 ```
+
+<a name="request"></a>
 
 # Request
 
@@ -143,9 +161,13 @@ class StoreUserRequest extends FormRequest
 }
 ```
 
+<a name="naming-2"></a>
+
 ## Pojmenování
 
 Název metody s názvem modelu v jednotném čísle a příponou "Request" (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
+
+<a name="configuration"></a>
 
 # Konfigurace
 
@@ -153,10 +175,14 @@ Konfigurace jsou vždy uloženy v adresáři `config`.
 
 > **Varování:** Metodu `env()` byste nikdy neměli volat přímo v aplikaci. Měli byste ji používat pouze v konfiguračních souborech a přistupovat k ní pomocí metody `config()`.
 
+<a name="best-practices-2"></a>
+
 ## Best practices
 
 - Vlastní nastavení aplikace by mělo být uloženo v `project.php`.
 - API klíče třetích stran by měly být uloženy v `services.php`.
+
+<a name="action"></a>
 
 # Action
 
@@ -179,15 +205,21 @@ class VerifyUserAction
 
 > **Tip:** Tento příkaz není součástí frameworku Laravel, nainstalujte si balíček `rockero-cz/laravel-starter-kit`.
 
+<a name="naming-3"></a>
+
 ## Pojmenování
 
 Název akce s příponou "Action" (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
+
+<a name="best-practices-3"></a>
 
 ## Best practices
 
 - Akce by měly obsahovat pouze jednu public metodu s názvem `run()`.
 - Pomocné metody jedné akce by měly být private nebo protected.
   - Více pomocných metod může zapsáno do třídy `Support`.
+
+<a name="support"></a>
 
 # Support
 
@@ -208,11 +240,17 @@ class Cart
 
 > **Tip:** Tento příkaz není součástí frameworku Laravel, nainstalujte si balíček `rockero-cz/laravel-starter-kit`.
 
+<a name="naming-4"></a>
+
 ## Pojmenování
 
 Název supportu bez přípony "Support" (`Cart`, `OpeningHours`, `Table`...)
 
+<a name="routing"></a>
+
 # Routing
+
+<a name="route-types"></a>
 
 ## Typy routů
 
@@ -220,6 +258,8 @@ Název supportu bez přípony "Support" (`Cart`, `OpeningHours`, `Table`...)
 - **api** - Routy, které zpracovávají API požadavky a odpovědi…
 - **channels** - Routy, které zpracovávají vysílání v reálném čase do kanálů pomocí websockets…
 - **console** - Routy pro vlastní příkazy, které lze spustit pomocí Artisan CLI...
+
+<a name="best-practices-4"></a>
 
 ## Best practices
 
@@ -235,6 +275,8 @@ Route::middleware('auth')->group(function () {
   });
 });
 ```
+
+<a name="middleware"></a>
 
 # Middleware
 
@@ -257,6 +299,8 @@ class HandleLocale
 }
 ```
 
+<a name="usage-example"></a>
+
 ## Ukázky použití
 
 ```php
@@ -265,6 +309,8 @@ Route::prefix('/admin')->name('admin.')->middleware(HandleLocale::class)->group(
   Route::resource('orders', OrderController::class)->name('orders');
 });
 ```
+
+<a name="observer"></a>
 
 # Observer
 
@@ -289,9 +335,13 @@ class UserObserver
 }
 ```
 
+<a name="naming-5"></a>
+
 ## Pojmenování
 
 Jméno modelu v jednotném čísle s příponou "Observer" (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
+
+<a name="usage-example-1"></a>
 
 ## Ukázky použití
 
@@ -314,6 +364,8 @@ public function deleting(Order $order): void
   $order->products()->delete();
 }
 ```
+
+<a name="event"></a>
 
 # Event
 
@@ -348,6 +400,8 @@ class OrderCreated
 }
 ```
 
+<a name="dispatching-events"></a>
+
 ## Vyvolání eventů
 
 ```php
@@ -357,6 +411,8 @@ OrderCreated::dispatch();
 
 event(new OrderCreated());
 ```
+
+<a name="listeners"></a>
 
 ## Listeners
 
@@ -383,6 +439,8 @@ class SendOrderCreatedNotification
 }
 ```
 
+<a name="command"></a>
+
 # Command
 
 Příkazy jsou mocným nástrojem pro automatizaci některých úloh v aplikaci. Laravel také poskytuje sadu vestavěných příkazů, které můžete použít ihned po instalaci.
@@ -406,6 +464,8 @@ class FetchUsers extends Command
     }
 }
 ```
+
+<a name="scheduling-commands"></a>
 
 ## Plánování příkazů
 

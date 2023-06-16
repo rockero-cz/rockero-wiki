@@ -1,4 +1,4 @@
-# Table of Contents
+# Architecture
 
 - [Model](#model)
   - [Naming](#naming)
@@ -34,6 +34,8 @@
 
 ---
 
+<a name="model"></a>
+
 # Model
 
 Models are classes that represent database tables. They allow you to interact with the corresponding data using object-oriented syntax.
@@ -49,9 +51,13 @@ class Product extends Model
 }
 ```
 
+<a name="naming"></a>
+
 ## Naming
 
 Singular without "Model" suffix (`User`, `Product`, `Category`...)
+
+<a name="best-practices"></a>
 
 ## Best practices
 
@@ -61,6 +67,8 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 - Use [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
 - Prefer `$fillable` over `$guarded` because of higher security.
 
+<a name="structure"></a>
+
 ## Structure
 
 - **Attributes** - `$fillable`, `$casts`…
@@ -68,6 +76,8 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 - **Relationships** - belongs, has, morphs…
 - **Accessors & mutators**
 - **Other methods**
+
+<a name="controller"></a>
 
 # Controller
 
@@ -82,9 +92,13 @@ class UserController extends Controller
 }
 ```
 
+<a name="naming-1"></a>
+
 ## Naming
 
 Singular with "Controller" suffix (`UserController`, `ProductController`, `CategoryController`...)
+
+<a name="types"></a>
 
 ## Types
 
@@ -92,12 +106,16 @@ Singular with "Controller" suffix (`UserController`, `ProductController`, `Categ
 - **api** - contains also a method for each `CRUD` operation, but does not provide HTML templates methods
 - **invokable** - controllers for single actions that do not match resources
 
+<a name="best-practices-1"></a>
+
 ## Best practices
 
 - Keep controller methods thin.
   - They should not contain huge business logic.
   - They are mainly responsible for one thing - returning a response.
 - For `CRUD` operations you should use [resource controllers](https://laravel.com/docs/controllers#resource-controllers)
+
+<a name="namespacing"></a>
 
 ## Namespacing
 
@@ -109,6 +127,8 @@ Api/Admin/UserController.php
 Api/UserController.php
 UserController.php
 ```
+
+<a name="request"></a>
 
 # Request
 
@@ -141,9 +161,13 @@ class StoreUserRequest extends FormRequest
 }
 ```
 
+<a name="naming-2"></a>
+
 ## Naming
 
 Method name with singular model name and with "Request" suffix (`StoreUserRequest`, `StoreProductRequest`, `UpdateCategoryRequest`...)
+
+<a name="configuration"></a>
 
 # Configuration
 
@@ -151,10 +175,14 @@ Configurations are always stored in the `config` directory.
 
 > **Warning:** You should never access the `env()` method directly in application. You should use it only in configuration files and access it by `config()` method.
 
+<a name="best-practices-2"></a>
+
 ## Best practices
 
 - Custom application settings should be stored in `project.php`.
 - API keys of 3rd party services should be stored in `services.php`.
+
+<a name="action"></a>
 
 # Action
 
@@ -177,15 +205,21 @@ class VerifyUserAction
 
 > **Tip:** This command is not part of Laravel framework, install our package `rockero-cz/laravel-starter-kit` to get a bit of magics.
 
+<a name="naming-3"></a>
+
 ## Naming
 
 Action purpose name with "Action" suffix (`VerifyUserAction`, `CreateProductAction`, `ReorderCategoryAction`...)
+
+<a name="best-practices-3"></a>
 
 ## Best practices
 
 - Actions should contain only one public method with the name `run()`.
 - Helper methods of the single action should be private or protected.
   - Multiple helper methods may be converted to `Support` classes.
+
+<a name="support"></a>
 
 # Support
 
@@ -206,11 +240,17 @@ class Cart
 
 > **Tip:** This command is not part of Laravel framework, install our package `rockero-cz/laravel-starter-kit` to get a bit of magics.
 
+<a name="naming-4"></a>
+
 ## Naming
 
 Support purpose name without "Support" suffix (`Cart`, `OpeningHours`, `Table`...)
 
+<a name="routing"></a>
+
 # Routing
+
+<a name="route-types"></a>
 
 ## Route Types
 
@@ -218,6 +258,8 @@ Support purpose name without "Support" suffix (`Cart`, `OpeningHours`, `Table`..
 - **api** - Routes that handle API requests and responses…
 - **channels** - Routes that handle real-time broadcasting to channels using websockets…
 - **console** - Routes for custom commands that can be executed via Artisan CLI…
+
+<a name="best-practices-4"></a>
 
 ## Best practices
 
@@ -233,6 +275,8 @@ Route::middleware('auth')->group(function () {
   });
 });
 ```
+
+<a name="middleware"></a>
 
 # Middleware
 
@@ -255,6 +299,8 @@ class HandleLocale
 }
 ```
 
+<a name="usage-example"></a>
+
 ## Usage example
 
 ```php
@@ -263,6 +309,8 @@ Route::prefix('/admin')->name('admin.')->middleware(HandleLocale::class)->group(
   Route::resource('orders', OrderController::class)->name('orders');
 });
 ```
+
+<a name="observer"></a>
 
 # Observer
 
@@ -287,9 +335,13 @@ class UserObserver
 }
 ```
 
+<a name="naming-5"></a>
+
 ## Naming
 
 Singular model name with "Observer" suffix (`UserObserver`, `ProductObserver`, `CategoryObserver`...)
+
+<a name="usage-example-1"></a>
 
 ## Usage example
 
@@ -312,6 +364,8 @@ public function deleting(Order $order): void
   $order->products()->delete();
 }
 ```
+
+<a name="event"></a>
 
 # Event
 
@@ -346,6 +400,8 @@ class OrderCreated
 }
 ```
 
+<a name="dispatching-events"></a>
+
 ## Dispatching events
 
 ```php
@@ -355,6 +411,8 @@ OrderCreated::dispatch();
 
 event(new OrderCreated());
 ```
+
+<a name="listeners"></a>
 
 ## Listeners
 
@@ -381,6 +439,8 @@ class SendOrderCreatedNotification
 }
 ```
 
+<a name="command"></a>
+
 # Command
 
 Commands are a powerful tool for automating some tasks in your application. Laravel also provides a set of built-in commands that you can use out of the box.
@@ -404,6 +464,8 @@ class FetchUsers extends Command
     }
 }
 ```
+
+<a name="scheduling-commands"></a>
 
 ## Scheduling commands
 

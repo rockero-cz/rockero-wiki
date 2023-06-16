@@ -1,4 +1,4 @@
-# Table of Contents
+# Database
 
 - [Column Naming](#column-naming)
   - [Names for frequently used columns](#names-for-frequently-used-columns)
@@ -19,17 +19,23 @@
 
 ---
 
+<a name="column-naming"></a>
+
 ## Column Naming
 
 - Primary key should be always `id`
 - Foreign keys should be a singular with the suffix `_id` (`user_id`, `product_id`, `category_id`...)
 - When choosing a name you should be careful with [reserved words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
 
+<a name="names-for-frequently-used-columns"></a>
+
 ### Names for frequently used columns:
 
 - **order_column** - field for sorting entities (e.g. drag & drop)
 - **company_number** - field for CIN / Company Identification Number
 - **vat_number** - field for VATIN / VAT ID / VAT Identification Number
+
+<a name="names-by-column-type"></a>
 
 ### Names by column type:
 
@@ -38,6 +44,8 @@
 
 > **Pro tip:** Some of boolean columns could be converted to timestamps (e.g. from `is_finished` to `finished_at`). There is a benefit that you have in fact two pieces of information in one column.
 
+<a name="column-sorting"></a>
+
 ## Column Sorting
 
 - **id** - should be always first
@@ -45,9 +53,13 @@
 - **rest of columns** - should be sorted by priorty and groupped by context
 - **native timestamps** - `created_at`, `updated_at`
 
+<a name="uuids"></a>
+
 ## UUIDs
 
 Secure alternative to ids. They should be used for publicly accessible websites or for some tables with sensitive content (bank accounts, orders, invoices...). [How to use UUIDs?](https://laravel.com/docs/eloquent#uuid-and-ulid-keys)
+
+<a name="indexes"></a>
 
 ## Indexes
 
@@ -55,9 +67,13 @@ Indexes are database structures that allow for faster retrieval of data. They wo
 
 > **Pro tip:** Just use indexes on any columns that are frequently queried or used in joins and your database performance will be improved.
 
+<a name="migrations"></a>
+
 # Migrations
 
 Migrations are a way to version control your database schema. They allow you to make changes to the database schema in a structured way, and enable you to easily roll back changes if necessary. [Read more](https://laravel.com/docs/migrations)
+
+<a name="best-practices"></a>
 
 ## Best practices
 
@@ -67,6 +83,8 @@ Migrations are a way to version control your database schema. They allow you to 
 - Add short note with `comment()` method if column names are not clear (e.g. professional terms)
 
 > **Pro tip:** As you build your application, you may accumulate more and more migrations over time. This can lead to your `database/migrations` directory becoming bloated with potentially hundreds of migrations. If you would like, you may "squash" your migrations into a single SQL file. [Read more](https://laravel.com/docs/migrations#squashing-migrations)
+
+<a name="seeders"></a>
 
 # Seeders
 
@@ -80,9 +98,13 @@ By using a seeder, you can quickly populate your database with the necessary dat
 
 > **Pro tip:** Sometimes you need to disable model events inside seeders. You can simply make it with a trait `WithoutModelEvents`. [Read more](https://laravel.com/docs/seeding#muting-model-events)
 
+<a name="naming"></a>
+
 ## Naming
 
 Singular with "Seeder" suffix (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
+
+<a name="factories"></a>
 
 # Factories
 
@@ -108,9 +130,13 @@ class ProductFactory extends Factory
 }
 ```
 
+<a name="naming-1"></a>
+
 ## Naming
 
 Singular model name with "Factory" suffix (`UserFactory`, `ProductFactory`, `CategoryFactory`...)
+
+<a name="usage-examples"></a>
 
 ## Usage Examples
 
@@ -147,6 +173,8 @@ Creating a factory with custom attributes:
 ```php
 User::factory()->create(['email' => 'info@rockero.cz']);
 ```
+
+<a name="factory-methods"></a>
 
 ## Factory methods
 
@@ -231,6 +259,8 @@ User::factory()
     ->create();
 ```
 
+<a name="custom-methods"></a>
+
 ## Custom Methods
 
 Instead of creating client with following setup in each test:
@@ -262,6 +292,8 @@ Client::factory()
     ->github()
     ->create();
 ```
+
+<a name="factory-callbacks"></a>
 
 ## Factory Callbacks
 

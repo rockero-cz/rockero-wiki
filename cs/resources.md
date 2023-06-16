@@ -1,13 +1,15 @@
-# Obsah
+# Zdroje
 
-- [Webové stránky a blogy](#webové-stránky-a-blogy)
-- [Doporučené kurzy](#doporučené-kurzy)
-- [Doporučené knihy](#doporučené-knihy)
-- [Doporučené účty na Twitteru](#doporučené-účty-na-twitteru)
+- [Webové stránky a blogy](#websites-and-blogs)
+- [Doporučené kurzy](#recommended-courses)
+- [Doporučené knihy](#recommended-books)
+- [Doporučené účty na Twitteru](#recommended-twitter-accounts)
 
 ---
 
-### Webové stránky a blogy
+<a name="websites-and-blogs"></a>
+
+## Webové stránky a blogy
 
 - [https://spatie.be/guideliness](https://spatie.be/guideliness)
 - [https://laravel-news.com/blog](https://laravel-news.com/blog)
@@ -23,9 +25,9 @@
 - [https://crynobone.com](https://crynobone.com)
 - [https://stitcher.io](https://stitcher.io)
 
----
+<a name="recommended-courses"></a>
 
-### Doporučené kurzy
+## Doporučené kurzy
 
 - [https://writing-readable-php.com](https://writing-readable-php.com)
 - [https://testing-laravel.com](https://testing-laravel.com)
@@ -33,9 +35,9 @@
 - [https://laravel-livewire.com/screencasts](https://laravel-livewire.com/screencasts/installation)
 - [https://www.youtube.com/c/laraveldaily](https://www.youtube.com/c/laraveldaily)
 
----
+<a name="recommended-books"></a>
 
-### Doporučené knihy
+## Doporučené knihy
 
 - [https://learn-laravel-queues.com](https://learn-laravel-queues.com)
 - [https://spatie.be/products/front-line-php](https://spatie.be/products/front-line-php)
@@ -44,9 +46,9 @@
 - [https://refactoring.guru](https://refactoring.guru)
 - [https://laravelsecrets.com](https://laravelsecrets.com)
 
----
+<a name="recommended-twitter-accounts"></a>
 
-### Doporučené účty na Twitteru
+## Doporučené účty na Twitteru
 
 - [https://twitter.com/rockero_cz](https://twitter.com/rockero_cz)
 - [https://twitter.com/taylorotwell](https://twitter.com/taylorotwell)
@@ -74,5 +76,3 @@
 - [https://twitter.com/freekmurze](https://twitter.com/freekmurze)
 - [https://twitter.com/spatie_be](https://twitter.com/spatie_be)
 - [https://twitter.com/PovilasKorop](https://twitter.com/PovilasKorop)
-
----

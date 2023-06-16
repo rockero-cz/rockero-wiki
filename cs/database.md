@@ -1,23 +1,25 @@
-# Obsah
+# Databáze
 
-- [Pojmenování sloupců](#pojmenování-sloupců)
-  - [Názvy pro často používané sloupce](#názvy-pro-často-používané-sloupce)
-  - [Názvy podle datového typu sloupce](#názvy-podle-datového-typu-sloupce)
-- [Řazení sloupců](#řazení-sloupců)
+- [Pojmenování sloupců](#column-naming)
+  - [Názvy pro často používané sloupce](#names-for-frequently-used-columns)
+  - [Názvy podle datového typu sloupce](#names-by-column-type)
+- [Řazení sloupců](#column-sorting)
 - [UUIDs](#uuids)
-- [Indexy](#indexy)
-- [Migrace](#migrace)
+- [Indexy](#indexes)
+- [Migrace](#migrations)
   - [Best practices](#best-practices)
-- [Seedery](#seedery)
-  - [Pojmenování](#pojmenování)
+- [Seedery](#seeders)
+  - [Pojmenování](#naming)
 - [Factories](#factories)
-  - [Pojmenování](#pojmenování-1)
-  - [Ukázky použití](#ukázky-použití)
-  - [Factory metody](#factory-metody)
-  - [Vlastní metody](#vlastní-metody)
+  - [Pojmenování](#naming-1)
+  - [Ukázky použití](#usage-examples)
+  - [Factory metody](#factory-methods)
+  - [Vlastní metody](#custom-methods)
   - [Factory Callbacks](#factory-callbacks)
 
 ---
+
+<a name="column-naming"></a>
 
 ## Pojmenování sloupců
 
@@ -25,11 +27,15 @@
 - Cizí klíče by měly být zapsány v jednotném čísle a s příponou `_id` (`user_id`, `product_id`, `category_id`...)
 - Když volíte jméno, buďte opatrní s [rezervovanými slovy](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
 
+<a name="names-for-frequently-used-columns"></a>
+
 ### Názvy pro často používané sloupce:
 
 - **order_column** - název pro řazení entit (např. drag & drop)
 - **company_number** - název pro IČO / Identifikační Číslo Organizace
 - **vat_number** - název pro DIČ / Daňové Identifikační Číslo
+
+<a name="names-by-column-type"></a>
 
 ### Názvy podle datového typu sloupce:
 
@@ -38,6 +44,8 @@
 
 > **Pro tip:** SoNěkteré boolean sloupce by mohly být převedeny na timestamp (např. z `is_finished` na `finished_at`). Výhodou je, že máte ve skutečnosti dvě informace v jednom sloupci.
 
+<a name="column-sorting"></a>
+
 ## Řazení sloupců
 
 - **id** - vždy by mělo být první
@@ -45,9 +53,13 @@
 - **ostatní slopce** - měly by být seřazené podle priorit a seskupiné podle kontextu
 - **nativní timestampy** - `created_at`, `updated_at`
 
+<a name="uuids"></a>
+
 ## UUIDs
 
 Bezpečná alternativa k ID. Měla by být používána pro veřejně přístupné webové stránky nebo pro některé tabulky s citlivým obsahem (bankovní účty, objednávky, faktury...). [Jak používat UUIDs?](https://laravel.com/docs/eloquent#uuid-and-ulid-keys)
+
+<a name="indexes"></a>
 
 ## Indexy
 
@@ -55,9 +67,13 @@ Indexy jsou struktury databáze, které umožňují rychlejší získávání da
 
 > **Pro tip:** Použijte indexy na sloupce, které jsou často dotazovány nebo používány v joinech a výkon vaší databáze se zlepší.
 
+<a name="migrations"></a>
+
 # Migrace
 
 Migrace jsou způsob verzování schématu vaší databáze. Umožňují vám provádět změny v schématu Vaší databáze přehledným způsobem a umožňují Vám také snadný způsob jak vrátit změny zpět, když je to nutné. [Více informací](https://laravel.com/docs/migrations)
+
+<a name="best-practices"></a>
 
 ## Best practices
 
@@ -67,6 +83,8 @@ Migrace jsou způsob verzování schématu vaší databáze. Umožňují vám pr
 - Přidejte krátkou poznámku pomocí metody `comment()`, pokud název sloupce není výstižný (např. odborné výrazy).
 
 > **Pro tip:** Při vývoji se postupem času může hromadit stále více a více migrací. To může vést k nadměrnému počtu souborů v adresáři `database/migrations`, kde mohou být stovky migrací. Pokud chcete, můžete své migrace "squashnout" do jednoho SQL souboru. [Více informací](https://laravel.com/docs/migrations#squashing-migrations)
+
+<a name="seeders"></a>
 
 # Seedery
 
@@ -80,9 +98,13 @@ Použitím seedru můžete rychle naplnit databázi potřebnými daty, aniž bys
 
 > **Pro tip:** Někdy je třeba v seederech vypnout eventy modelu. To lze jednoduše provést pomocí traitu `WithoutModelEvents`. [Více informací](https://laravel.com/docs/seeding#muting-model-events)
 
+<a name="naming"></a>
+
 ## Pojmenování
 
 Jednotné číslo s příponou "Seeder" (`UserSeeder`, `ProductSeeder`, `CategorySeeder`...)
+
+<a name="factories"></a>
 
 # Factories
 
@@ -108,9 +130,13 @@ class ProductFactory extends Factory
 }
 ```
 
+<a name="naming-1"></a>
+
 ## Pojmenování
 
 Název modelu s příponou "Factory" (`UserFactory`, `ProductFactory`, `CategoryFactory`...)
+
+<a name="usage-examples"></a>
 
 ## Ukázky použití
 
@@ -147,6 +173,8 @@ Vytvoření factory s vlastní hodnotou:
 ```php
 User::factory()->create(['email' => 'info@rockero.cz']);
 ```
+
+<a name="factory-methods"></a>
 
 ## Factory metody
 
@@ -231,6 +259,8 @@ User::factory()
     ->create();
 ```
 
+<a name="custom-methods"></a>
+
 ## Vlastní metody
 
 Místo vytváření klienta s následujícími hodnotami v každém testu:
@@ -262,6 +292,8 @@ Client::factory()
     ->github()
     ->create();
 ```
+
+<a name="factory-callbacks"></a>
 
 ## Factory Callbacks
 
