@@ -38,7 +38,7 @@ When writing code, it is important to keep in mind some general principles and s
 | Exception    | singular with "Exception" suffix                           | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
 | Interface    | adjective/noun without suffix                              | `Loggable`, `Configurable`, `Exportable`                                             |
 | Job          | job name with "Job" suffix                                 | `SendEmailJob`, `ProcessPaymentJob`, `GenerateReportJob`                             |
-| Mail         | mail name without suffix                                   | `WelcomeEmail`, `OrderConfirmationMail`, `NewsletterMail`                            |
+| Mail         | mail name without suffix                                   | `InvoicePaid`, `OrderShipped`, `PasswordReset`                                       |
 | Middleware   | middleware name without suffix                             | `Authentication`, `RateLimit`, `Cors`                                                |
 | Model        | singular without suffix                                    | `User`, `Product`, `Category`                                                        |
 | Notification | notification name without suffix                           | `InvoicePaid`, `OrderShipped`, `PasswordReset`                                       |

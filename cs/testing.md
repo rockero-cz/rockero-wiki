@@ -18,7 +18,7 @@
 
 ## Úvod
 
-Pro automatizované testování používáme framework [Pest](https://pestphp.com/) kvůli hodně jeho výhodám. `Pest` se soustředí na jednoduchost a psaní testů je s ním opravdu zábava.
+Pro automatizované testování používáme framework [Pest](https://pestphp.com/) kvůli jeho mnoha výhodám. `Pest` se soustředí na jednoduchost a psaní testů je s ním opravdu zábava.
 
 Navíc má také lepší asserty, pěknou syntaxi a skvělou dokumentaci.
 
@@ -39,7 +39,7 @@ it('has a welcome page', function() {
 - **Kvalita kódu** - psání testů Vás donutí nad kódem přemýšlet
 - **Odchytávání bugů** - testy dokážou odhalit některé chyby před tím, než se dostanou na produkci
 - **Úspora času** - v dlouhodobém měřítku testy snižují potřeby manuálního testování
-- **Větší jistota** - je snazší provádět změny v kódu a přidávat nové funkce, jelikož je malé rizitiko zničení funkcionality
+- **Větší jistota** - je snazší provádět změny v kódu a přidávat nové funkce, jelikož je malé riziko zničení funkcionality
 
 <a name="when-to-write-tests"></a>
 
@@ -61,7 +61,7 @@ Každá vytvořená třída obsahující nějakou logiku by měla mít také tes
 
 Na většině projektů píšeme pouze `Feature` testy. Nicméně u některých složitých projektů je důležité zahrnout také `Unit` testy.
 
-Při psaní testů je důležité zahrnout několik scénářů, aby se pokrylo co nejvíce možných případů. Kromě toho by testy také měly obsahovat pouze asserty, která jsou přímo související s testovanou třídou nebo funkcí. Tím se předejde redundanci a zlepší se celoková čitelnost testů.
+Při psaní testů je důležité zahrnout několik scénářů, aby se pokrylo co nejvíce možných případů. Kromě toho by testy také měly obsahovat pouze asserty, která jsou přímo související s testovanou třídou nebo funkcí. Tím se předejde redundanci a zlepší se celková čitelnost testů.
 
 > **Pro tip:** Udržujte pokrytí testy co nejvyšší, mělo by to být alespoň 70 %.
 
@@ -75,10 +75,10 @@ Helpery mohou snížit duplicitu v kódu a zlepšit čitelnost testů. Pomocí `
 
 ## Pest hooky
 
-- **`beforeEach()`** - Připraví něco před jednotlivým spuštění testu…
-- **`afterEach()`** - Vyčistí testovací data po jednotlivém spuštění testu…
+- **`beforeEach()`** - Připraví něco před každým jednotlivým spuštění testu…
+- **`afterEach()`** - Vyčistí testovací data po každém jednotlivém spuštění testu…
 - **`beforeAll()`** - Připraví něco před spuštěním všech testů…
-- **`afterAll()` -** - Vyčistí testovací data po spuštění všech testů…
+- **`afterAll()`** - Vyčistí testovací data po spuštění všech testů…
 
 <a name="custom-methods"></a>
 
@@ -172,7 +172,7 @@ app(ProcessPaymentAction::class)->run($payment, ...);
 
 ## Pojmenování
 
-Pro zajištění správného pojmenování vašich testovacích případů se doporučuje postupovat podle poskytnutého příkladu.
+Pro zajištění správného pojmenování vašich testů se doporučuje postupovat podle poskytnutého příkladu.
 
 ```php
 // Good examples - lowercase, descriptive
@@ -185,6 +185,10 @@ it('has a welcome page', function() {
 });
 
 // Bad example - uppercase, low descriptive
+test('PAYMENT', function() {
+  ...
+});
+
 it('sums', function() {
   ...
 });

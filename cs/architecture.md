@@ -217,7 +217,7 @@ Název akce s příponou "Action" (`VerifyUserAction`, `CreateProductAction`, `R
 
 - Akce by měly obsahovat pouze jednu public metodu s názvem `run()`.
 - Pomocné metody jedné akce by měly být private nebo protected.
-  - Více pomocných metod může zapsáno do třídy `Support`.
+  - Více pomocných metod může být zapsáno do třídy `Support`.
 
 <a name="support"></a>
 
@@ -264,7 +264,7 @@ Název supportu bez přípony "Support" (`Cart`, `OpeningHours`, `Table`...)
 ## Best practices
 
 - URL by měly být v množném čísle.
-- Každý route by měl mít jméno.
+- Každá route by měla mít jméno.
 - Routy by měly být seskupeny podle entit.
 
 ```php
@@ -314,7 +314,7 @@ Route::prefix('/admin')->name('admin.')->middleware(HandleLocale::class)->group(
 
 # Observer
 
-Observery se používají k naslouchání určitým událostem, které nastaly modely, jako například `created`, `updated` nebo `deleted` a další...
+Observery se používají k naslouchání určitým událostem, které nastaly u modelů, jako například `created`, `updated` nebo `deleted` a další...
 
 Použitím observerů můžete udržet vaše modely zaměřené na jejich hlavní odpovědnosti a zabránit zanesení další logiky. [Více informací](https://laravel.com/docs/eloquent#observers)
 
@@ -373,7 +373,7 @@ Eventy jsou cesta, jak spouštět a zpracovávat akce, které se vyskytují běh
 
 Když je event vyvolán, Laravel upozorní všechny zaregistrované listenery k eventu, aby měly možnost provést veškeré akce. [Více informací](https://laravel.com/docs/events)
 
-> Většinou používáme akce místo eventů, protože jsou jednodušší a srozumitelnější. Nicméně stále používáme eventy pro některé notifikace nebo v kombinaci s akcemi či [websockety](https://laravel.com/docs/broadcasting).
+> Většinou používáme akce místo eventů, protože jsou jednodušší a srozumitelnější. Nicméně stále používáme eventy pro některé notifikace nebo v kombinaci s [websockety](https://laravel.com/docs/broadcasting).
 
 **Příkaz pro vytvoření:** `php artisan make:event OrderCreated`
 

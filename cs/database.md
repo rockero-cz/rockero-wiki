@@ -42,7 +42,7 @@
 - **boolean** - `is_enabled`, `has_reviews`
 - **timestamp** - `published_at`, `valid_from`, `scheduled_for`
 
-> **Pro tip:** SoNěkteré boolean sloupce by mohly být převedeny na timestamp (např. z `is_finished` na `finished_at`). Výhodou je, že máte ve skutečnosti dvě informace v jednom sloupci.
+> **Pro tip:** Některé boolean sloupce by mohly být převedeny na timestamp (např. z `is_finished` na `finished_at`). Výhodou je, že máte ve skutečnosti dvě informace v jednom sloupci.
 
 <a name="column-sorting"></a>
 
@@ -50,7 +50,7 @@
 
 - **id** - vždy by mělo být první
 - **cizí klíče**
-- **ostatní slopce** - měly by být seřazené podle priorit a seskupiné podle kontextu
+- **ostatní sloupce** - měly by být seřazené podle priorit a seskupiné podle kontextu
 - **nativní timestampy** - `created_at`, `updated_at`
 
 <a name="uuids"></a>
@@ -92,11 +92,11 @@ Seedery slouží k naplnění databáze počátečními/testovacími daty. Jsou 
 
 Použitím seedru můžete rychle naplnit databázi potřebnými daty, aniž byste je museli pokaždé zadávat ručně. [Více informací](https://laravel.com/docs/seeding)
 
-- **Příkaz pro vytvoření:** `php artisan make:seeder UserFactory`
+- **Příkaz pro vytvoření:** `php artisan make:seeder UserSeeder`
 - **Spuštění všech seederů:** `php artisan db:seed`
 - **Spuštění konkrétního seederu:** `php artisan db:seed --class=UserSeeder`
 
-> **Pro tip:** Někdy je třeba v seederech vypnout eventy modelu. To lze jednoduše provést pomocí traitu `WithoutModelEvents`. [Více informací](https://laravel.com/docs/seeding#muting-model-events)
+> **Pro tip:** Někdy je třeba v seederech vypnout eventy modelu. To lze jednoduše provést pomocí trait `WithoutModelEvents`. [Více informací](https://laravel.com/docs/seeding#muting-model-events)
 
 <a name="naming"></a>
 

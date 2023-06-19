@@ -37,8 +37,8 @@ Při psaní kódu je důležité mít na paměti některé obecné zásady a sta
 | Event        | název eventu s příponou "Event"                   | `UserCreatedEvent`, `OrderCreatedEvent`, `OrderShippedEvent`                         |
 | Exception    | jednotné číslo s příponou "Exception"             | `ValidationException`, `NotFoundException`, `DuplicateEntryException`                |
 | Interface    | přídavné jméno/podstatné jméno bez přípony        | `Loggable`, `Configurable`, `Exportable`                                             |
-| Job          | název jobu bez s příponou "Job"                   | `SendEmailJob`, `ProcessPaymentJob`, `GenerateReportJob`                             |
-| Mail         | název mailu bez přípony                           | `WelcomeEmail`, `OrderConfirmationMail`, `NewsletterMail`                            |
+| Job          | název jobu s příponou "Job"                       | `SendEmailJob`, `ProcessPaymentJob`, `GenerateReportJob`                             |
+| Mail         | název mailu bez přípony                           | `InvoicePaid`, `OrderShipped`, `PasswordReset`                                       |
 | Middleware   | název middlewaru bez přípony                      | `Authentication`, `RateLimit`, `Cors`                                                |
 | Model        | jednotné číslo bez přípony                        | `User`, `Product`, `Category`                                                        |
 | Notification | název notifikace bez přípony                      | `InvoicePaid`, `OrderShipped`, `PasswordReset`                                       |
@@ -135,7 +135,7 @@ abstract public function methodE() {}
 protected $signature = 'command:name';
 ```
 
-- Vlastní atributy by měly mít type hint a mely by být také popsané komentářem, pokud nemají dostatečně výstižný název.
+- Vlastní atributy by měly mít type hint a měly by být také popsané komentářem, pokud nemají dostatečně výstižný název.
 
 ```php
 /**

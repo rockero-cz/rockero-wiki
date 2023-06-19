@@ -62,7 +62,7 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 ## Best practices
 
 - Follow the defined structure.
-- Models should contains only Laravel native things (relations, scopes...) and database-related code.
+- Models should contain only Laravel native things (relations, scopes...) and database-related code.
   - Huge business logic should be written into `Support` or `Action` classes.
 - Use [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
 - Prefer `$fillable` over `$guarded` because of higher security.
@@ -265,7 +265,7 @@ Support purpose name without "Support" suffix (`Cart`, `OpeningHours`, `Table`..
 
 - URLs should be in plural.
 - Each route should have name.
-- Routes should be groupped by entities.
+- Routes should be grouped by entities.
 
 ```php
 Route::middleware('auth')->group(function () {

@@ -50,7 +50,7 @@
 
 - **id** - should be always first
 - **foreign keys**
-- **rest of columns** - should be sorted by priorty and groupped by context
+- **rest of columns** - should be sorted by priorty and grouped by context
 - **native timestamps** - `created_at`, `updated_at`
 
 <a name="uuids"></a>
@@ -92,7 +92,7 @@ Seeders are used to populate a database with initial/testing data. They are espe
 
 By using a seeder, you can quickly populate your database with the necessary data without having to manually enter it every time. [Read more](https://laravel.com/docs/seeding)
 
-- **Create command:** `php artisan make:seeder UserFactory`
+- **Create command:** `php artisan make:seeder UserSeeder`
 - **Running all seeders:** `php artisan db:seed`
 - **Running specific seeder:** `php artisan db:seed --class=UserSeeder`
 
