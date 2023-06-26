@@ -152,7 +152,7 @@ mock(Client::class)
     ->times(3)
 ```
 
-> **Pro tip:** V případě, že vytváříte mock pro integraci externího API, měli byste také zajistit, že vaše testy netrefují oficiální endpointy - v Laravelu můžete zabránit těmto přímým requestům pomocí metody `Http::preventStrayRequests()`. Po zavolání této metody vyhodí každý test bez odpovídajícího mocku výjimku. [Read more](https://laravel.com/docs/http-client#preventing-stray-requests)
+> **Pro tip:** V případě, že vytváříte mock pro integraci externího API, měli byste také zajistit, že vaše testy netrefují oficiální endpointy - v Laravelu můžete zabránit těmto přímým requestům pomocí metody `Http::preventStrayRequests()`. Po zavolání této metody vyhodí každý test bez odpovídajícího mocku výjimku. [Více informací](https://laravel.com/docs/http-client#preventing-stray-requests)
 
 <a name="fixtures"></a>
 
