@@ -11,7 +11,7 @@
 
 ## Websites & Blogs
 
-- [https://spatie.be/guideliness](https://spatie.be/guideliness)
+- [https://spatie.be/guideliness](https://spatie.be/blog)
 - [https://laravel-news.com/blog](https://laravel-news.com/blog)
 - [https://christoph-rumpel.com](https://christoph-rumpel.com)
 - [https://freek.dev](https://freek.dev)
