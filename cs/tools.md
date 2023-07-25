@@ -90,11 +90,11 @@ Výborný nástroj na práci s velkými soubory jako jsou dumpy z databáze, XML
 
 Výhody:
 - Zvládá otevírání a práci s velkými soubory.
-- Zdarma.
 
 Nevýhody:
 - Podpora pluginů není udržována jako ve VS Code nebo PHP storm.
 - Občasné chyby pluginů.
+- Placená licence (Úhel pohledu).
 
 https://www.sublimetext.com/
 
@@ -177,7 +177,7 @@ Výhody:
 Nevýhody:
 - Free licence dovolí otevřít pouze 3 záložky.
 
-https://tinkerwell.app/
+https://tableplus.com/
 
 <a name="dbngin"></a>
 
@@ -212,7 +212,9 @@ https://usehelo.com/
 
 ### Valet
 
-Snadný způsob jak spravovat projekty a lokální server. Díky valetu můžete snadno spouštět nové projekty a okamžitě na nich pracovat bez nutnosti nastavování lokálního prostředí.
+Snadný způsob jak spravovat projekty a lokální server.
+Díky valetu můžete snadno spouštět nové projekty a okamžitě na nich pracovat bez nutnosti nastavování lokálního prostředí.
+Lze snadno měnit PHP verzi pro jednotlivé projekty přes isolate.
 
 https://laravel.com/docs/valet
 
