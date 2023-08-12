@@ -2,9 +2,10 @@
       <img alt="Banner" src="./banner.png">
 </picture>
 
-# Rockero Wiki
+# Laraverse Wiki
 
 [![Rockero](https://img.shields.io/badge/Rockero-yellow)](https://rockero.cz)
+[![Laraverse](https://img.shields.io/badge/Laraverse-yellow)](https://laraverse.net)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
 Since we are taking the Laravel community in the `Czech Republic` and `Slovakia` to the next level, we decided to share this **Wiki** not only about Laravel.
