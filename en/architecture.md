@@ -61,21 +61,27 @@ Singular without "Model" suffix (`User`, `Product`, `Category`...)
 
 ## Best practices
 
-- Follow the defined structure.
-- Models should contain only Laravel native things (relations, scopes...) and database-related code.
-  - Huge business logic should be written into `Support` or `Action` classes.
-- Use [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
-- Prefer `$fillable` over `$guarded` because of higher security.
+1. Follow the defined structure:
 
-<a name="structure"></a>
+- Attributes - `$fillable`, `$casts`…
+- Lifecycle methods - `boot()`, `booted()`
+- Relationships - belongs, has, morphs…
+- Accessors & mutators
+- Other methods
 
-## Structure
+2. Models should contain only Laravel native things (relations, scopes…) and database-related code.
 
-- **Attributes** - `$fillable`, `$casts`…
-- **Lifecycle methods** - `boot()`, `booted()`
-- **Relationships** - belongs, has, morphs…
-- **Accessors & mutators**
-- **Other methods**
+- Your business logic should be written into `Support` or `Action` classes.
+
+3. Use [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) where possible.
+
+- The code for creating/updating the model is shorter and cleaner.
+
+4. Prefer `$fillable` over `$guarded`.
+
+- Generally safer method => reduces the risk of data issues.
+- Greater control over attributes.
+- Ability to easily find database column names by only opening the model.
 
 <a name="controller"></a>
 
@@ -110,10 +116,14 @@ Singular with "Controller" suffix (`UserController`, `ProductController`, `Categ
 
 ## Best practices
 
-- Keep controller methods thin.
-  - They should not contain huge business logic.
-  - They are mainly responsible for one thing - returning a response.
-- For `CRUD` operations you should use [resource controllers](https://laravel.com/docs/controllers#resource-controllers)
+1. Keep controller methods thin.
+
+- They should not contain huge business logic.
+- They are mainly responsible for one thing - returning a response.
+
+2. Use [resource controllers](https://laravel.com/docs/controllers#resource-controllers) for `CRUD` operations.
+
+- Resource defines `CRUD` methods by following naming conventions.
 
 <a name="namespacing"></a>
 
@@ -179,8 +189,12 @@ Configurations are always stored in the `config` directory.
 
 ## Best practices
 
-- Custom application settings should be stored in `project.php`.
-- API keys of 3rd party services should be stored in `services.php`.
+1. Access config values only via `config()` method.
+2. Store custom application settings in seprated config file.
+
+- e.g. `project.php`
+
+3. API keys of 3rd party services should be stored in `services.php`.
 
 <a name="action"></a>
 
@@ -215,9 +229,13 @@ Action purpose name with "Action" suffix (`VerifyUserAction`, `CreateProductActi
 
 ## Best practices
 
-- Actions should contain only one public method with the name `run()`.
-- Helper methods of the single action should be private or protected.
-  - Multiple helper methods may be converted to `Support` classes.
+1. Each action should contain only one public method.
+
+- Use some self-explanatory name such as `run()` or `execute()`.
+
+2. Action helper methods should be private or protected.
+
+- Multiple helper methods may be converted to `Support` classes.
 
 <a name="support"></a>
 
@@ -263,9 +281,9 @@ Support purpose name without "Support" suffix (`Cart`, `OpeningHours`, `Table`..
 
 ## Best practices
 
-- URLs should be in plural.
-- Each route should have name.
-- Routes should be grouped by entities.
+1. URLs should be in plural.
+2. Each route should have name.
+3. Routes should be grouped by entities.
 
 ```php
 Route::middleware('auth')->group(function () {

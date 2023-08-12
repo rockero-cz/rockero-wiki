@@ -61,21 +61,27 @@ Jednotné číslo bez přípony "Model" (`User`, `Product`, `Category`...)
 
 ## Best practices
 
-- Dodržujte definovanou strukturu.
-- Modely by měly obsahovat pouze nativní věci z Laravelu (vztahy, scopes...) a kód související s databází.
-- Rozsáhlá business logika by měla být rozepsaná do tříd `Support` nebo `Action`.
-- Používejte [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) všude, kde je to možné.
-- Preferujte `$fillable` před `$guarded`, kvůli vyšší bezpečnosti.
+1. Dodržujte danou strukturu:
 
-<a name="structure"></a>
+- Atributy - `$fillable`, `$casts`…
+- Lifecycle metody - `boot()`, `booted()`
+- Vztahy - belongs, has, morphs…
+- Accessors & mutators
+- Ostatní metody
 
-## Struktura
+2. Modely by měly obsahovat pouze prvky specifické pro Laravel (vztahy, scopes…) a kód související s databází.
 
-- **Atributy** - `$fillable`, `$casts`…
-- **Lifecycle metody** - `boot()`, `booted()`
-- **Vztahy** - belongs, has, morphs…
-- **Accessory & mutatory**
-- **Ostatní metody**
+- Vaše business logika by měla být zapsána do tříd `Support` nebo `Action`.
+
+3. Použvíejte [mass assignment](https://laravel.com/docs/eloquent#mass-assignment) všude, kde je to možné.
+
+- Kód pro vytváření/upravování modelu je kratší a také čistší.
+
+4. Používejte raději `$fillable` místo `$guarded`.
+
+- Obecně je to bezpečnější princip => snižuje riziko problémů s daty.
+- Větší kontrola nad atributy.
+- Snadná možnost najít názvy databázových sloupců pouhým otevřením modelu.
 
 <a name="controller"></a>
 
@@ -110,10 +116,14 @@ Jednotné číslo s příponou "Controller" (`UserController`, `ProductControlle
 
 ## Best practices
 
-- Udržujte metody controllerů krátké.
-- Neměly by obsahovat rozsáhlou business logiku.
-- Jsou hlavně zodpovědné za jednu věc - vrácení odpovědi.
-- Pro `CRUD` operace byste měli používat [resource controllery](https://laravel.com/docs/controllers#resource-controllers)
+1. Udržujte metody controllerů co nejkratší.
+
+- Metody controllerů by neměly obsahovat rozsáhlou business logiku.
+- Jsou primárně zodpovědné jen za jednu věc - vrácení odpovědi.
+
+2. Používejte [resource controllery](https://laravel.com/docs/controllers#resource-controllers) pro `CRUD` operace.
+
+- Resource controllery definují metody `CRUD` s dodržením jmenných konvencí.
 
 <a name="namespacing"></a>
 
@@ -179,8 +189,12 @@ Konfigurace jsou vždy uloženy v adresáři `config`.
 
 ## Best practices
 
-- Vlastní nastavení aplikace by mělo být uloženo v `project.php`.
-- API klíče třetích stran by měly být uloženy v `services.php`.
+1. Přistupujte k hodnotám z konfigurace pouze pomocí metody `config()`.
+2. Ukládejte vlastní nastavení aplikace do samostatného konfiguračního souboru.
+
+- např. `project.php`
+
+3. Klíče API třetích stran by měly být uloženy v souboru `services.php`.
 
 <a name="action"></a>
 
@@ -215,9 +229,13 @@ Název akce s příponou "Action" (`VerifyUserAction`, `CreateProductAction`, `R
 
 ## Best practices
 
-- Akce by měly obsahovat pouze jednu public metodu s názvem `run()`.
-- Pomocné metody jedné akce by měly být private nebo protected.
-  - Více pomocných metod může být zapsáno do třídy `Support`.
+1. Každá akce by měla obsahovat pouze jednu public metodu.
+
+- Použijte výstižný název funkce, jako například `run()` nebo `execute()`.
+
+2. Jiné pomocné metody akce by měly být private nebo protected.
+
+- Více pomocných metod může být převedeno do tříd `Support`.
 
 <a name="support"></a>
 
@@ -263,9 +281,9 @@ Název supportu bez přípony "Support" (`Cart`, `OpeningHours`, `Table`...)
 
 ## Best practices
 
-- URL by měly být v množném čísle.
-- Každá route by měla mít jméno.
-- Routy by měly být seskupeny podle entit.
+1. URL by měly být v množném čísle.
+2. Každá route by měla mít jméno.
+3. Routy by měly být seskupeny podle entit.
 
 ```php
 Route::middleware('auth')->group(function () {
