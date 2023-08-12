@@ -124,35 +124,36 @@ abstract public function methodE() {}
 
 ## Commenting
 
+Well-written comments elevate the readability and understanding of code, serving as valuable documentation for future developers who may need to understand it or modify it.
+
+However, don't forget that readeable and understandable code is important in general - comments serve as additional support and they boost quality to the next level.
+
 <a name="attributes"></a>
 
 ### Attributes
 
-- Native attributes from Laravel (e.g. `$fillable`) should have been without comment.
-- Also without a type hint because you will never access the property
+When declaring native attributes in Laravel, such as `$fillable`, you can omit comments and type hints since these properties will not be never accessed directly.
 
 ```php
-protected $signature = 'command:name';
+protected $fillable = [];
 ```
 
-- Custom attributes should have a native type hint and should be written with comments when the name is not self-explanatory enough.
+Custom attributes should be accompanied by a type hint and also supplemented with comments when the name is not sufficiently self-explanatory.
 
 ```php
+public int $clickCount = 0;
+
 /**
  * Count represents the number of clicks.
  */
 public int $count = 0;
-
-// or
-
-public int $clickCount = 0;
 ```
 
 <a name="methods"></a>
 
 ### Methods
 
-- Comment all methods
+You should provide descriptive comments to every method in the codebase.
 
 ```php
 /**
@@ -168,4 +169,4 @@ public function index()
 
 ### Code
 
-- Comment all unclear logic - e.g. many statements
+You should provide descriptive comments to every part of the code that looks unclear, such as many statements.
