@@ -117,7 +117,7 @@ public function methodB() {}
 protected function methodC() {}
 private function methodD() {}
 
-abstract public function methodE() {}
+abstract public function methodE();
 ```
 
 <a name="commenting"></a>
