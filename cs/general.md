@@ -124,35 +124,36 @@ abstract public function methodE();
 
 ## Komentování
 
+Dobře napsané komentáře zvyšují čitelnost a porozumění kódu a slouží jako cenná dokumentace pro budoucí vývojáře, kteří budou chtít kód upravit nebo mu porozumět.
+
+Nicméně, nezapomínejte, že srozumitelný kód je důležitý obecně - komentáře slouží jako dodatečná podpěra a zvyšují kvalitu kódu.
+
 <a name="attributes"></a>
 
 ### Atributy
 
-- Nativní atributy Laravelu (např. `$fillable`) by měly být bez komentáře.
-- Také bez type hintu, protože k proměnné nikdy nebudete přistupovat.
+Při deklaraci nativních atributů v Laravelu, jako je `$fillable`, můžete vynechat komentáře a datové typy, protože na tyto atributy se nikdy nebude přistupovat přímo.
 
 ```php
-protected $signature = 'command:name';
+protected $fillable = [];
 ```
 
-- Vlastní atributy by měly mít type hint a měly by být také popsané komentářem, pokud nemají dostatečně výstižný název.
+Vlastní atributy by měly být doplněny datovým typem a také by měly být doplněny komentáři, pokud jejich název není dostatečně samovysvětlující.
 
 ```php
+public int $clickCount = 0;
+
 /**
  * Count represents the number of clicks.
  */
 public int $count = 0;
-
-// or
-
-public int $clickCount = 0;
 ```
 
 <a name="methods"></a>
 
 ### Metody
 
-- Komentujte všechny metody
+Ke každé metodě v kódu byste měli poskytnout výstižné komentáře.
 
 ```php
 /**
@@ -168,4 +169,4 @@ public function index()
 
 ### Kód
 
-- Komentujte všechnu méně srozumitelnou logiku, např. hodně podmínek
+Měli byste poskytnout výstižné komentáře ke každé části kódu, která je nejasná, například mnoho podmínek.
