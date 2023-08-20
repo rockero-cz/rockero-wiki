@@ -31,7 +31,7 @@ Pokud nevíte, jak napsat specifickou část kódu, tak zkuste trochu hledat - p
 
 ## Raději mít duplicitní kód, než **špatnou** abstrakci.
 
-Pokud narazíte, oprava špatné abstrakce Vás může stát hodně času.
+Pokud narazíte, oprava špatné abstrakce Vás může stát hodně času, protože může být použita na mnoha místech a mohou se na ni vázat další věci, které bude potřeba přepsat.
 
 Je lepší počkat až budete mít jistotu ohledně abstrakce a pak se pustit do refaktorování.
 
@@ -146,4 +146,4 @@ Nepište do nich rozsáhlou business logiku, ta by měla být raději napsána v
 
 Migrace Vám umožňují sdílet schéma databáze mezi členy týmu a mezi prostředími.
 
-Jsou také vaším verzováním databáze. Neexistuje žádný důvod, proč by je někdo neměl používat.
+Jsou také vaším verzováním databáze. Pokud upravíte databázi natvrdo, tak to může vytvořit mnoho problémů, které se budou zpětně špatně hledat. Neexistuje žádný důvod, proč by je někdo neměl používat.

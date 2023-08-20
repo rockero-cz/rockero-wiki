@@ -29,15 +29,20 @@
 
 <a name="names-for-frequently-used-columns"></a>
 
-### Names for frequently used columns:
+### Recommended names for frequently used columns:
+
+These names are recommendations on how to name certain columns to unify them across projects. These columns may be called differently, but it is good to keep them unified.
 
 - **order_column** - field for sorting entities (e.g. drag & drop)
 - **company_number** - field for CIN / Company Identification Number
 - **vat_number** - field for VATIN / VAT ID / VAT Identification Number
+- **zip_code** - field for ZIP Code / Postal Code / Post Code
 
 <a name="names-by-column-type"></a>
 
 ### Names by column type:
+
+Recommended prefixes/suffixes for naming columns.
 
 - **boolean** - `is_enabled`, `has_reviews`
 - **timestamp** - `published_at`, `valid_from`, `scheduled_for`
@@ -47,6 +52,8 @@
 <a name="column-sorting"></a>
 
 ## Column Sorting
+
+This sorting helps for better reading and orientation in the database.
 
 - **id** - should be always first
 - **foreign keys**

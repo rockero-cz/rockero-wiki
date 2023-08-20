@@ -29,15 +29,20 @@
 
 <a name="names-for-frequently-used-columns"></a>
 
-### Názvy pro často používané sloupce:
+### Doporučené názvy pro často používané sloupce:
+
+Tato pojmenování jsou doporučením jak pojmenovat určité sloupce a tím je sjednotit napříč projekty. Tyto sloupce se mohou nazývat i jinak, ale je dobré držet je sjednocené.
 
 - **order_column** - název pro řazení entit (např. drag & drop)
 - **company_number** - název pro IČO / Identifikační Číslo Organizace
 - **vat_number** - název pro DIČ / Daňové Identifikační Číslo
+- **zip_code** - název pro PSČ
 
 <a name="names-by-column-type"></a>
 
 ### Názvy podle datového typu sloupce:
+
+Doporučené prefixy/sufixy pro pojmenování sloupců.
 
 - **boolean** - `is_enabled`, `has_reviews`
 - **timestamp** - `published_at`, `valid_from`, `scheduled_for`
@@ -47,6 +52,8 @@
 <a name="column-sorting"></a>
 
 ## Řazení sloupců
+
+Toto řazení pomáhá k lepšímu čtení a orientaci v databázi.
 
 - **id** - vždy by mělo být první
 - **cizí klíče**
