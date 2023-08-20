@@ -31,7 +31,7 @@ If you don't how to write specific code, try to make some research - dig deeper 
 
 ## Duplicated code is preferred over the **wrong** abstraction.
 
-If you stumble, fixing a bad abstraction can cost you a lot of time.
+If you stumble, fixing a bad abstraction can cost you a lot of time because it can be used in many places and may have other things tied to it that will need to be rewritten.
 
 Better wait a while and make refactor when you are confident with the abstraction.
 
@@ -146,4 +146,4 @@ Don't put there your huge business logic, it should be written in `Support` or `
 
 Migrations allow you to share database schema between team members and between environments.
 
-They are also your database version control. There isn't a single reason why someone shouldn't use them.
+They are also your database version control. If you modify the database hardcoded, it can create a lot of problems that will be hard to find in reverse. There isn't a single reason why someone shouldn't use them.
