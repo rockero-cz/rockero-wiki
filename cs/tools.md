@@ -1,61 +1,54 @@
 # Nástroje pro efektivní vývoj
 
-### Vývojová prostředí (IDE)
+- [Vývojová prostředí (IDE)](#vývojová-prostředí-ide)
+    - [Php Storm](#php-storm)
+    - [Visual Studio Code](#visual-studio-code)
+    - [Sublime Text](#sublime-text)
 
-- [Php Storm](#php-storm)
-- [VS Code](#vs-code)
-- [Sublime Text](#sublime-text)
+- [Debug, Testování](#debug-testování)
+    - [Ray (by Spatie)](#ray-by-spatie)
+    - [Tinkerwell](#tinkerwell)
+    - [Postman](#postman)
+    - [Insomnia](#insomnia)
 
-### Debug / Testování
+- [Databáze](#databáze)
+    - [Table Plus](#table-plus)
+    - [DBngin](#dbngin)
 
-- [Spatie Ray](#spatie-ray)
-- [Tinkerwell](#tinkerwell)
-- [Postman](#postman)
-- [Insomnia](#insomnia)
+- [Emaily](#emaily)
+    - [MailTrap](#mailtrap)
+    - [Helo](#helo)
 
-### Database
+- [Lokální vývoj](#lokální-vývoj)
+    - [Laravel Herd](#laravel-herd)
 
-- [Table Plus](#table-plus)
-- [DBngin](#dbngin)
+- [Deployment](#deployment)
+    - [Laravel Forge](#laravel-forge)
+    - [Envoyer](#envoyer)
 
-### Emaily
+- [Git](#git)
+    - [GitHub Desktop](#github-desktop)
 
-- [MailTrap](#mailtrap)
-- [Helo](#helo)
+- [Produktivita](#produktivita)
+    - [Raycast](#raycast)
+    - [Tuple](#tuple)
+    - [Slack](#slack)
+    - [Discord](#discord)
+    - [Iterm](#iterm)
+    - [Fig](#fig)
 
-### Lokální vývoj
-
-- [HerdLaravel](#herdlaravel)
-
-### Deployment
-
-- [Forge](#forge)
-- [Envoyer](#envoyer)
-
-### Git
-
-- [GitHub Desktop](#github-desktop)
-
-### Produktivita
-
-- [Raycast](#raycast)
-- [Tuple](#tuple)
-- [Slack](#slack)
-- [Discord](#discord)
-- [Iterm](#iterm)
-- [Fig](#fig)
-
-### Ostatní
-
-- [Laravel Shift](#laravel-shift)
+- [Ostatní](#ostatní)
+    - [Laravel Shift](#laravel-shift)
 
 ---
+
+<a name="vývojová-prostředí-ide"></a>
 
 # Vývojová prostředí (IDE)
 
 <a name="php-storm"></a>
 
-## PhpStorm
+## Php Storm
 
 OS: (MacOS, Linux, Windows)
 
@@ -75,7 +68,7 @@ Profesionální IDE na vývoj aplikací v php. Nejvíce se hodí na střední a 
 - Pomalejší načítání projektů
 - Placená licence
 
-<a name="vs-code"></a>
+<a name="visual-studio-code"></a>
 
 ## Visual Studio Code
 
@@ -116,9 +109,11 @@ Výborný nástroj na práci s velkými soubory jako jsou dumpy z databáze, XML
 - Občasné chyby pluginů
 - Placená licence
 
-# Debug / Testování
+<a name="debug-testování"></a>
 
-<a name="spatie-ray"></a>
+# Debug, Testování
+
+<a name="ray-by-spatie"></a>
 
 ## Ray (by Spatie)
 
@@ -173,6 +168,8 @@ Nástroj pro testování a vývoj API, podobně jako Postman. Insomnia je oblíb
 
 **Odkaz ke stažení:** [https://insomnia.rest/pricing](https://insomnia.rest/pricing)
 
+<a name="databáze"></a>
+
 # Databáze
 
 <a name="table-plus"></a>
@@ -202,6 +199,8 @@ Rychlá instalace a management lokálních databází jako je PostgreSQL, MySQL,
 
 **Odkaz ke stažení:** [https://dbngin.com](https://dbngin.com)
 
+<a name="emaily"></a>
+
 # Emaily
 
 <a name="mailtrap"></a>
@@ -222,9 +221,11 @@ Nástroj pro testování emailů na lokálním environmentu.
 
 **Odkaz ke stažení:** [https://usehelo.com](https://usehelo.com)
 
+<a name="lokální-vývoj"></a>
+
 # Lokální vývoj
 
-<a name="herdlaravel"></a>
+<a name="laravel-herd"></a>
 
 ## Laravel Herd
 
@@ -235,9 +236,11 @@ Rychlejší práce serveru a čas testů.
 
 **Odkaz ke stažení:** [https://herd.laravel.com](https://herd.laravel.com)
 
+<a name="deployment"></a>
+
 # Deployment
 
-<a name="forge"></a>
+<a name="laravel-forge"></a>
 
 ## Laravel Forge
 
@@ -263,6 +266,8 @@ Služba pro snadný deployment aplikace se zero downtime.
 - Automatizovaný restart queues
 - Placená licence
 
+<a name="git"></a>
+
 # Git
 
 <a name="github-desktop"></a>
@@ -278,6 +283,8 @@ Snadný a rychlý management gitu s propojením na github.
 - Přehledné UI pro správu gitu a jednotlivých commitů
 - Integrace s githubem pro rychlou práci a snadnou udržitelnost vývoje
 - Zdarma
+
+<a name="produktivita"></a>
 
 # Produktivita
 
@@ -370,6 +377,8 @@ Rozšíření pro Váš terminál se skvělým našeptávání.
 - Rychlejší a snadnější práce s terminálem
 - Našeptávání komandů popřípadě složek, souborů
 - Zdarma
+
+<a name="ostatní"></a>
 
 # Ostatní
 

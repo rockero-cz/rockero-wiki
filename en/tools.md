@@ -1,61 +1,54 @@
 # Tools for effective development
 
-### Development Environments (IDE)
+- [Development Environments (IDE)](#development-environments-ide)
+    - [Php Storm](#php-storm)
+    - [Visual Studio Code](#visual-studio-code)
+    - [Sublime Text](#sublime-text)
 
-- [Php Storm](#php-storm)
-- [VS Code](#vs-code)
-- [Sublime Text](#sublime-text)
+- [Debug, Testing](#debug-testing)
+    - [Ray (by Spatie)](#ray-by-spatie)
+    - [Tinkerwell](#tinkerwell)
+    - [Postman](#postman)
+    - [Insomnia](#insomnia)
 
-### Debug / Testing
+- [Database](#database)
+    - [Table Plus](#table-plus)
+    - [DBngin](#dbngin)
 
-- [Spatie Ray](#spatie-ray)
-- [Tinkerwell](#tinkerwell)
-- [Postman](#postman)
-- [Insomnia](#insomnia)
+- [Emails](#emails)
+    - [MailTrap](#mailtrap)
+    - [Helo](#helo)
 
-### Database
+- [Local development](#local-development)
+    - [Laravel Herd](#laravel-herd)
 
-- [Table Plus](#table-plus)
-- [DBngin](#dbngin)
+- [Deployment](#deployment)
+    - [Laravel Forge](#laravel-forge)
+    - [Envoyer](#envoyer)
 
-### Emails
+- [Git](#git)
+    - [GitHub Desktop](#github-desktop)
 
-- [MailTrap](#mailtrap)
-- [Helo](#helo)
+- [Productivity](#productivity)
+    - [Raycast](#raycast)
+    - [Tuple](#tuple)
+    - [Slack](#slack)
+    - [Discord](#discord)
+    - [Iterm](#iterm)
+    - [Fig](#fig)
 
-### Local development
-
-- [HerdLaravel](#herdlaravel)
-
-### Deployment
-
-- [Forge](#forge)
-- [Envoyer](#envoyer)
-
-### Git
-
-- [GitHub Desktop](#github-desktop)
-
-### Productivity
-
-- [Raycast](#raycast)
-- [Tuple](#tuple)
-- [Slack](#slack)
-- [Discord](#discord)
-- [Iterm](#iterm)
-- [Fig](#fig)
-
-### Others
-
-- [Laravel Shift](#laravel-shift)
+- [Others](#others)
+    - [Laravel Shift](#laravel-shift)
 
 ---
+
+<a name="development-environments-ide"></a>
 
 # Development Environments (IDE)
 
 <a name="php-storm"></a>
 
-## PhpStorm
+## Php Storm
 
 OS: (MacOS, Linux, Windows)
 
@@ -75,7 +68,7 @@ Professional IDE for developing applications in php. It is most suitable for med
 - Slower loading of projects
 - Paid license
 
-<a name="vs-code"></a>
+<a name="visual-studio-code"></a>
 
 ## Visual Studio Code
 
@@ -116,9 +109,11 @@ An excellent tool for working with large files such as database dumps, XML or js
 - Occasional plugin bugs
 - Paid license
 
-# Debug / Testing
+<a name="debug-testing"></a>
 
-<a name="spatie-ray"></a>
+# Debug, Testing
+
+<a name="ray-by-spatie"></a>
 
 ## Ray (by Spatie)
 
@@ -173,6 +168,8 @@ API testing and development tool, similar to Postman. Insomnia is popular with d
 
 **Download link:** [https://insomnia.rest/pricing](https://insomnia.rest/pricing)
 
+<a name="database"></a>
+
 # Database
 
 <a name="table-plus"></a>
@@ -202,6 +199,8 @@ Quick installation and management of local databases such as PostgreSQL, MySQL, 
 
 **Download link:** [https://dbngin.com](https://dbngin.com)
 
+<a name="emails"></a>
+
 # Emails
 
 <a name="mailtrap"></a>
@@ -222,9 +221,11 @@ A tool for testing emails on a local environment.
 
 **Download link:** [https://usehelo.com](https://usehelo.com)
 
+<a name="local-development"></a>
+
 # Local development
 
-<a name="herdlaravel"></a>
+<a name="laravel-herd"></a>
 
 ## Laravel Herd
 
@@ -235,9 +236,11 @@ Faster server work and test time.
 
 **Download link:** [https://herd.laravel.com](https://herd.laravel.com)
 
+<a name="deployment"></a>
+
 # Deployment
 
-<a name="forge"></a>
+<a name="laravel-forge"></a>
 
 ## Laravel Forge
 
@@ -263,6 +266,8 @@ Service for easy application deployment with zero downtime.
 - Automated restart of queues
 - Paid license
 
+<a name="git"></a>
+
 # Git
 
 <a name="github-desktop"></a>
@@ -278,6 +283,8 @@ Easy and fast git management with github link.
 - Clear UI for managing git and individual commits
 - Integration with github for fast work and easy development sustainability
 - Free
+
+<a name="productivity"></a>
 
 # Productivity
 
@@ -371,7 +378,9 @@ An extension for your terminal with great whispering.
 - Whispering commands or folders, files
 - Free
 
-# Ostatní
+<a name="others"></a>
+
+# Others
 
 <a name="laravel-shift"></a>
 
